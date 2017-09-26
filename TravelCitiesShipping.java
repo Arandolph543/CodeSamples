@@ -46,14 +46,14 @@ public class TravelCitiesShipping {
         initialRoute_size = Integer.parseInt(in.nextLine());
         int initialRoute;
         String initialRoute_item;
-        LinkedListNode _initialRoute = null;
+        LinkedListNode initialRoute = null;
         for(initialRoute = 0; initialRoute < initialRoute_size; initialRoute++) { 
             try {
                 initialRoute_item = in.nextLine();
             } catch (Exception e) {
                 initialRoute_item = null;
             }
-            _initialRoute = _insert_node_into_singlylinkedlist(_initialRoute, initialRoute_item);
+            initialRoute = insert_node_into_singlylinkedlist(initialRoute, initialRoute_item);
         }
         
         
@@ -61,16 +61,16 @@ public class TravelCitiesShipping {
         citiesToSkip_size = Integer.parseInt(in.nextLine());
         String[] citiesToSkip = new String[citiesToSkip_size];
         String citiesToSkip_item;
-        for(int _citiesToSkip_i = 0; _citiesToSkip_i < citiesToSkip_size; _citiesToSkip_i++) {
+        for(int citiesToSkip_i = 0; citiesToSkip_i < citiesToSkip_size; citiesToSkip_i++) {
             try {
                 citiesToSkip_item = in.nextLine();
             } catch (Exception e) {
                 citiesToSkip_item = null;
             }
-            citiesToSkip[_citiesToSkip_i] = citiesToSkip_item;
+            citiesToSkip[citiesToSkip_i] = citiesToSkip_item;
         }
         
-        res = updateRoute(_initialRoute, citiesToSkip);
+        res = updateRoute(initialRoute, citiesToSkip);
         while (res != null) {
             bw.write(res.val);
             bw.newLine();
