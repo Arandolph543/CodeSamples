@@ -24,8 +24,8 @@ public class ForwardStairSolution {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		int _n;
-		_n = Integer.parseInt(in.nextLine().trim());
+		int n;
+		n = Integer.parseInt(in.nextLine().trim());
 		
 		StairCase(_n);
 	
