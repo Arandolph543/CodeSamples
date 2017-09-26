@@ -31,12 +31,7 @@ public class TravelCitiesShipping {
         return head;
     }
 	
-	static LinkedListNode updateRoute(LinkedListNode initialRoute, String[] citiesToSkip) {
-		
-
-    }
-	
-	public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(System.in);
         final String fileName = System.getenv("OUTPUT_PATH");
         BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
