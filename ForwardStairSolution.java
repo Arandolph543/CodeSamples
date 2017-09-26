@@ -27,7 +27,7 @@ public class ForwardStairSolution {
 		int n;
 		n = Integer.parseInt(in.nextLine().trim());
 		
-		StairCase(_n);
+		StairCase(n);
 	
 	}
 }
