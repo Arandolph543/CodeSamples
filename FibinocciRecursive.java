@@ -8,12 +8,6 @@ public class FibinocciRecursive {
 		return fibinocciRec(fibNum -1) + fibinocciRec(fibNum - 2);		
 	}
 	
-	public static void printReverseFib(int[] fib) {
-		for(int x = fib.length;x<fib.length;x--) {
-			System.out.println(fib[x] + " ,");
-		}
-	}
-	
 	public static void main(String[] arg) {
 		FibinocciRecursive seq = new FibinocciRecursive();
 		System.out.print("Your Fibinocci sequence base 1,1 to 10 is ");
