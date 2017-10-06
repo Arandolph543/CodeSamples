@@ -10,7 +10,6 @@ class Anagram {
 	   char[] word2 = sentence2.toCharArray();
 	   Arrays.sort(word1);
 	   Arrays.sort(word2);
-	   System.out.println("Debug: " + String.valueOf(word1).toString() + " " + String.valueOf(word2).toString());
        return Arrays.equals(word1,word2);
     }
     
@@ -27,13 +26,12 @@ class Anagram {
             anagram = new Boolean[numOfInputs];
             for(int i = 0; i< numOfInputs*2;i++) {
                 sentences[i] = buffer.readLine(); 
-				//System.out.println(sentences[i]);
+				
             }  
 			int count = 0;
 			
 			for(int d = 0;d<numOfInputs;d++) {
 				anagram[d] = anagramClass.isAnagram(sentences[count], sentences[count+1]);
-				// System.out.println(anagram[d]);
 				count++;
 			}   
 			for(int l=0;l<numOfInputs;l++) {
