@@ -17,13 +17,7 @@ public class ChocolateDistributionCopy {
         for (int i = 0; i< counts.length; i++){
             for (int j = 0; j<3; j++){
 
-                //Determine baselines -- difference between possible Max and Min
-                //Not only possible to take from Max values also can take from Min values
-                //Like the case  1 5 5  -> 0 5 5 -> 0 0 5 -> 0 0 0
-                //Baseline can be keep min, take 1 or 2 from min. 
-                //Dont need to consider the case of take 5 coz it will not affect greedy approach below
-
-                int delta = counts[i] - min +j;
+               int delta = counts[i] - min +j;
 				System.out.println("Delta: " + delta);
                 results[i][j] = 0;
                 while(true){
