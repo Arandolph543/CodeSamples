@@ -5,8 +5,7 @@ public class FibinocciRecursive {
 			return 0;
 		if(fibNum < 2) 
 			return 1;
-		int tempFibNumber = fibinocciRec(fibNum -1) + fibinocciRec(fibNum - 2);
-		return tempFibNumber;		
+		return fibinocciRec(fibNum -1) + fibinocciRec(fibNum - 2);		
 	}
 	
 	public static void printReverseFib(int[] fib) {
