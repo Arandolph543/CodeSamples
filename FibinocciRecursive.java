@@ -17,19 +17,10 @@ public class FibinocciRecursive {
 	
 	public static void main(String[] arg) {
 		FibinocciRecursive seq = new FibinocciRecursive();
-		System.out.print("Your Fibinocci sequence base 1,1 to 100 is ");
-		int x1 = 1;
-		int x2 = 1;
-		int fibSeq = seq.fibinocciRec(100);
-		System.out.println(fibSeq);
-		int[] fib = new int[fibSeq];
-		int seqNum = 0;
-		int i = 0;
-		// while((seqNum = seq.fibinocciRec(x1,x2, fib, i)) != -1){ 
-			// System.out.print("This is seq: " + seqNum + " index " + i);
-			// if(seq == null) {
-				// break;
-			// } 
-		// }
+		System.out.print("Your Fibinocci sequence base 1,1 to 10 is ");
+		for(int i = 0; i<= 10;i++) {
+			System.out.println(" Seq: " + i + " " + fibinocciRec(i));
+		}
 	}	
 }
+
