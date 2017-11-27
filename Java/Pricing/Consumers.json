@@ -1,0 +1,15 @@
+{ "people" : [
+	{ "name": "Kelly", 
+	"age": 50, 
+	"sex": "female", 
+	"illness": "Allergies"},
+	{ "name": "Josh",
+	"age": 40, 
+	"sex": "male", 
+	"illness": "Sleep Apnea"},
+	{ "name": "Brad", 
+	"age": 20, 
+	"sex": "male", 
+	"illness": "Heart Disease"}
+	]
+}
