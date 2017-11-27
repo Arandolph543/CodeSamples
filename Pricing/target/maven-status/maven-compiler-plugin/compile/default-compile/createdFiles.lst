@@ -1,6 +1,0 @@
-com\pricing\InsurancePricing.class
-com\pricing\PricingStrategy.class
-com\pricing\BasePricing.class
-com\pricing\Insurance.class
-com\pricing\model\Consumer.class
-com\pricing\DiscountPricing.class
