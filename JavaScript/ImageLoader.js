@@ -6,6 +6,7 @@ xhr.onreadystatechange = function(callback){
         var url = window.URL || window.webkitURL;
         document.querySelector("#img").src = 
         url.createObjectURL(this.response);
+		callback(url);
     }else if(this.readyState == 4){
         console.log(this.status);
     }else{
