@@ -1,6 +1,6 @@
 
 var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function(){
+xhr.onreadystatechange = function(callback){
     console.log("State: ", this.readyState, "Status: ", this.status);
     if (this.readyState == 4 && this.status == 200){
         var url = window.URL || window.webkitURL;
