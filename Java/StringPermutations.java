@@ -4,7 +4,7 @@ import java.io.*;
 
 class StringPermutations {
 
-	static void permute(String input) {
+	void permute(String input) {
 		int inputLength = input.length();
 		boolean[ ] used = new boolean[ inputLength ];
 		StringBuffer outputString = new StringBuffer();
@@ -13,7 +13,7 @@ class StringPermutations {
 		doPermute ( charArray, outputString, used, inputLength, 0 );
 	}
 
-	static void doPermute ( char[ ] charArray, StringBuffer outputString, boolean[ ] used, int inputLength, int level) {
+	void doPermute ( char[ ] charArray, StringBuffer outputString, boolean[ ] used, int inputLength, int level) {
 		if( level == inputLength) {
 			System.out.println ( outputString.toString()); 
 		}
@@ -33,14 +33,14 @@ class StringPermutations {
 	}
 	
 	public static void main(String args[]) {
-		
+		StringPermutations strPerms = new StringPermutations();
 		BufferedReader stringBuffer; 
 		try {
 			String in;
 			stringBuffer = new BufferedReader(new InputStreamReader(System.in));
 		
 			while ((in = stringBuffer.readLine()) != null) {
-				permute(in);
+				strPerms.permute(in);
 			}
 		} catch (IOException e) {
 			System.out.print("An " + e + " has occurred.");			

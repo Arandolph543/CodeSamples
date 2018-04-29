@@ -1,6 +1,7 @@
 import java.util.*;
 import java.lang.*;
 import java.io.*;
+
 public class FindStreamMedian {
 
 	public String findMedian(List<Integer> inputsElements) {
@@ -9,9 +10,7 @@ public class FindStreamMedian {
 			sum += num;			
 		}
 		return String.valueOf(Math.floor(sum/2));
-		
 	}
-
 
 	public static void main(String[] args) {
 		FindStreamMedian fsm = new FindStreamMedian();
