@@ -1,40 +1,39 @@
 public class LookAndSaySequence {
 
-	int[] lookAndSayGenerate(int n) {
-		int[] seqNumbersLAS = new int[n];
-		seqNumbersLAS[0] = 1;
-		int count = 0;
-		int seq = 0;
-		for(int i = 1;i<n;i++) {
-			String nthElement = String.valueOf(seqNumbersLAS[i]);
-			for(int k =0;k<nthElement.length();k++) {
-				int temp = Integer.valueOf(nthElement.charAt(k));
-				System.out.println("Debug: comparison " + temp + " " + Integer.valueOf(nthElement.charAt(k)));
-				while(Integer.valueOf(nthElement.charAt(k)) == temp) {
+	String lookAndSayGenerateNth(int n) {
+		int term = 0;
+		
+		if(n == 1)
+			return "1";
+		if(n == 2)
+			return "11";
+		
+		String seq = "11";
+		for(int i =3;i<n;i++) {
+			String temp = "";
+			int count = 1;
+			seq += '$';
+			int length = seq.length();
+			for(int j=1;j<length;j++) {
+				if(seq.charAt(j) != seq.charAt(j-1)) {
+					temp += count;
+					temp += seq.charAt(j-1);
+					count = 1;
+				} else {
 					count++;
 				}
-				System.out.println("Debug: count " + count);
-				if(count > 1) {
-					seqNumbersLAS[i] = count;
-					seqNumbersLAS[i+1] = Integer.valueOf(nthElement);
-					count = 0;
-				} else {
-					seqNumbersLAS[i] = 1;
-					seqNumbersLAS[i+1] = Integer.valueOf(nthElement);
-					count = 0;
-				}
 			}
+			seq = temp;
 		}
-		return seqNumbersLAS;
+		return seq;
+		
 	}
 
 	public static void main(String[] arg) {
 		LookAndSaySequence lass = new LookAndSaySequence();
-		int n = 6;
-		int[] nthSequence = new int[6];
-		nthSequence = lass.lookAndSayGenerate(n);
-		for(int i = 0;i<n;i++) {
-			System.out.print(nthSequence[i] + " " );
-		}
+		int n = 	
+		String nthSequence = "";
+		nthSequence = lass.lookAndSayGenerateNth(n);
+		System.out.print(nthSequence);
 	}
 }
