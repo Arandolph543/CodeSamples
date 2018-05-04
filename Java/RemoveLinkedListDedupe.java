@@ -2,32 +2,24 @@ import java.util.*;
 
 public class RemoveLinkedListDedupe {
 
-	LinkedList<Integer> dedupeLinkedList(LinkedList<Integer> unsortedList) {
-		LinkedList<Integer> sortedList = new LinkedList<Integer>();
-		
-		for(int i = 0;i<unsortedList.size();i++) {
-			if(unsortedList.get(i) > unsortedList.get(i+1)) {
-				if(sortedList.size() == 0) {
-					sortedList.add(unsortedList.get(i+1));
-				} else if(sortedList.peek() > unsortedList.get(i+1)) {
-					ListIterator<Integer> it = sortedList.listIterator();
-					while(it.hasNext()) {
-						if(it.next() > sortedList.get(i)) {
-							int index = it.nextIndex() -2;
-							sortedList.add(index, it.get());
-						}
-					}
-				}
-				
+	LinkedList<Integer> dedupeLinkedList(LinkedList<Integer> sortedList) {
+		Collections.sort(sortedList);
+		ListIterator iterator = sortedList.listIterator();
+		Integer itemListNumber = 0;
+		int index = 0;
+		int length = sortedList.size() -1;
+		while(iterator.hasNext() && index < length) {
+			int tempIndex = iterator.nextIndex() + 1;
+			if(iterator.next().equals(sortedList.get(tempIndex))) {
+			System.out.println(iterator.next() + " " + sortedList.get(tempIndex));
+				iterator.remove();
 			}
+			index++;
 		}
+			
+			
 		return sortedList;		
 	}
-
-
-
-
-
 
 	public static void main(String[] args) {
 		RemoveLinkedListDedupe rlld = new RemoveLinkedListDedupe();
@@ -39,11 +31,8 @@ public class RemoveLinkedListDedupe {
 		LinkedList<Integer> list = rlld.dedupeLinkedList(unsortedList);
 		ListIterator<Integer> listIterator = list.listIterator();
 		while(listIterator.hasNext()) {
-			System.out.println(listIterator.next());
+			System.out.print(listIterator.next() + " ");
 		}
 	}
-
-
-
 
 }
