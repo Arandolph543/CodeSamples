@@ -10,7 +10,6 @@ public class ForwardStairSolution {
         String stair = "";
         for(int j = 1; j <= n; j++) {
             for(int i = 1; i <= n; i++) {
-				// System.out.println("db" + j + " " + i);
 				if(i <= n-j) {
                    stair += " ";
 				} else {
