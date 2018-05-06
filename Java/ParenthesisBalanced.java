@@ -1,6 +1,6 @@
 import java.util.*;
-import java.lang.*;
 import java.io.*;
+import java.lang.*;
 
 class ParenthesisBalanced {
     
@@ -11,13 +11,15 @@ class ParenthesisBalanced {
 		int count = 0;
         for(int i = 0; i<chars.length;i++) {
             stack.push(String.valueOf(chars[i]));
+        }
+        for(int n = 0; n<chars.length;n++) {
 			count++;			
             String topParen = stack.peek();
-            if((chars[i] == ')' && topParen == "(") ||(chars[i] == '}' && topParen == "{") ||(chars[i] == ']' && topParen == "[") ) {
+            if((chars[n] == ')' && topParen == "(") ||(chars[n] == '}' && topParen == "{") ||(chars[n] == ']' && topParen == "[") ) {
                 stack.pop();
 				count--;
             } 
-        }
+		}
         if(stack.search("(") != -1 && stack.search("[") != -1 && stack.search("{") != -1 && count == 0) {
               balanced = true;
         }
@@ -26,29 +28,16 @@ class ParenthesisBalanced {
     
     
 	public static void main (String[] args) {
-		String parenthesis = "({[})";
-		ParenthesisBalanced gfg = new ParenthesisBalanced();
 		BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
-        int distributions = 0;
-        boolean[] operations = null;
-        try { 
-            distributions = Integer.parseInt(buffer.readLine());
-            operations = new boolean[distributions];
-            String[] parenthesis = new String[distributions];
-            String input = "";
-            for(int i = 0; i< distributions;i++) {
-                input = buffer.readLine();
-                parenthesis[i] = input;
-                operations[i] = gfg.balanced(parenthesis[i]);
-            }  
-            for(int d = 0;d<operations.length;d++) {
-				if(operations[d]) {
-        		    System.out.println("balanced");
-        		}else {
-        		    System.out.println("not balanced");
-        		}
+        String input = "";
+		try { 
+			input = buffer.readLine();
+            boolean parenBalancedValue = balanced(input);
+			if(parenBalancedValue) {
+				System.out.println("balanced");
+			}else {
+				System.out.println("not balanced");
 			}
-            
         } catch(Exception ex) {
             System.out.println(ex.toString());
         }
