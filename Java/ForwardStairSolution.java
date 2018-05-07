@@ -1,8 +1,5 @@
-import java.io.*;
 import java.util.*;
-import java.text.*;
 import java.math.*;
-import java.util.regex.*;
 
 public class ForwardStairSolution {
 	
@@ -27,7 +24,5 @@ public class ForwardStairSolution {
 		n = Integer.parseInt(in.nextLine().trim());
 		
 		StairCase(n);
-	
 	}
 }
-

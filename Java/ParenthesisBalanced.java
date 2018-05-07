@@ -11,16 +11,20 @@ class ParenthesisBalanced {
 		int count = 0;
         for(int i = 0; i<chars.length;i++) {
             stack.push(String.valueOf(chars[i]));
+			count++;
         }
         for(int n = 0; n<chars.length;n++) {
-			count++;			
             String topParen = stack.peek();
-            if((chars[n] == ')' && topParen == "(") ||(chars[n] == '}' && topParen == "{") ||(chars[n] == ']' && topParen == "[") ) {
+            if((topParen.equals(")") && chars[n] == '(') ||(topParen.equals("}") && chars[n] == '{') ||(topParen.equals("]") && chars[n] == '[')) {
                 stack.pop();
-				count--;
+				stack.pop();
+				count = count-2;
+				if(count == 0) {
+					break;
+				}
             } 
 		}
-        if(stack.search("(") != -1 && stack.search("[") != -1 && stack.search("{") != -1 && count == 0) {
+        if(stack.empty()) {
               balanced = true;
         }
         return balanced;

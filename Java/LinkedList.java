@@ -17,7 +17,6 @@ class LinkedList {
 		while(ptr1 != null && ptr1.next != null) {
 			ptr = ptr1;
 			while(ptr.next != null) {
-			System.out.println("ptr has next " + ptr.next.next + " " + ptr.data);
 				if(ptr1.data == ptr.next.data) {
 					dup = ptr.next;
 					ptr.next = ptr.next.next;
