@@ -1,20 +1,17 @@
 public class OneEdit {
 
-
 	int min(int x, int y, int z) {
 		int min = 0;
 		if(y<=x && y<=z) {
-			min = y;
+			return y;
 		}else if(x<=y && x<=z) {
-			min = x;
-		}else if(z<=x && z<=y) {
-			min = z;
+			return x;
+		}else {
+			return z;
 		}
-		return min;		
 	}
 
-
-	public int checkOneEdited(String strEditable1, String strEditable2, int l, int h) {
+	int checkOneEdited(String strEditable1, String strEditable2, int l, int h) {
 			if(l== 0)
 				return h;
 			
@@ -30,21 +27,11 @@ public class OneEdit {
 		
 	}
 
-
-
-
-
-
-	public static void main(String[] main) {
+	public static void main(String[] args) {
 		OneEdit oe = new OneEdit();
-		System.out.println("The string cats and cates are : " + oe.checkOneEdited("cates", "cats", 0, 5));
-		
-		
+		String strEditable1 = "saturday";
+		String strEditable2 = "Sunday";
+		System.out.println("The string saturday and sunday are : " + oe.checkOneEdited("saturday", "sundays", strEditable1.length(), strEditable2.length()));
 	}
-
-
-
-
-
 
 }
