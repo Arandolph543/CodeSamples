@@ -4,23 +4,15 @@ import java.util.List;
 public class SelectActivities {
 
 	List<Integer> findActivites(int[] startTimes, int[] finishTimes) {
-		int activityTimerPlace = startTimes[0];
 		List<Integer> times = new ArrayList<>();
+		times.add(0);
 		int index = 0;
-		for(int i = 0;i<startTimes.length;i++) {
-			for(int j=0;j<finishTimes.length;j++) {
-				if(i == j) {
-					if(startTimes[i] < finishTimes[j]) {
-						if(startTimes[i] >= activityTimerPlace && ((j+1 < finishTimes.length && startTimes[j+1] >= activityTimerPlace) || finishTimes[j] > startTimes[j])) {
-							activityTimerPlace = finishTimes[j];
-							if(!times.contains(i)) {
-								times.add(i);
-							}
-							index++;
-						}
-					}
-					
-				}	
+		for(int i = 1;i<startTimes.length;i++) {
+			if(startTimes[i] >= finishTimes[index]) {
+				if(!times.contains(i)) {
+					times.add(i);
+				} 
+				index = i;
 			}
 		}
 		return times;
