@@ -29,12 +29,6 @@ public class HistogramLargestArea {
 					heightArray[i] = Integer.parseInt(hist[i]);
 				}
 			}
-			if(heightArray.length % 2 == 0) {
-				mid = heightArray.length/2;
-			}else {
-				mid = (heightArray.length/2) + 1;
-			}
-			
 			greatestArea[l] = findGreatestHistArea(heightArray, 0, heightArray.length-1);
 		}
 		return greatestArea;
@@ -46,18 +40,30 @@ public class HistogramLargestArea {
 		int histArea = 0;
 		int maxHistArea = 0;
 		int tp = 0;
-		while(index < m) {
-			System.out.println(index);
-			if(left.empty() || heights[left.peek() - 1] <= heights[index]) {
-				left.push(heights[index++]);
-			} else {
+		while(index <= m) {
+			if(left.empty() || heights[index] > left.peek()  ) {
+				left.push(heights[index]);
+				System.out.println("Debug: " + left.peek());
+			} 
+			if(tp == 0 || left.peek() < tp) {
 				tp = left.peek();
-				left.pop();
-				histArea = heights[tp-1] * (left.empty() ? index : index - left.peek() -1);
-				if(maxHistArea < histArea) {
-					maxHistArea = histArea;
-				}
 			}
+			int tempIndex = index;
+			if(left.peek() > tp && (left.peek() == heights[tempIndex] || left.peek() < heights[tempIndex])) {
+				int count = 2;
+				while(tempIndex < m && left.peek() == heights[tempIndex]) {
+					count++;				
+					tempIndex++;
+				}
+				histArea = heights[tempIndex] * count;
+			} else {
+				histArea = tp * (index + 1);
+			}
+			left.pop();
+			if(maxHistArea < histArea) {
+				maxHistArea = histArea;
+			}
+			index++;
 		}
 		while(!left.empty()) {
 			tp = left.peek();
@@ -86,7 +92,7 @@ public class HistogramLargestArea {
 		int[] areas = new int[count];
 		areas = greatestAreaClass.areaInHistogram();
 		for(int i = 0;i<areas.length;i++) {
-			System.out.println("The area in the histrogram is : " + areas[i]);
+			System.out.println("The area in the histogram is : " + areas[i]);
 		}
 	}
 
