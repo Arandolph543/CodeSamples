@@ -14,8 +14,8 @@ public class MedianOfIntegerStream {
 				return array[index/2];
 			}
 		}
+		
 		while(index < array.length) {
-			
 			if(index > 0 && array[index] < array[index -1]) {
 				int temp = array[index];
 				array[index] = array[index-1];
@@ -36,6 +36,5 @@ public class MedianOfIntegerStream {
 	public static void main(String[] args) {
 		int[] numbers = {6,3, 4,5, 7, 8, 9};
 		System.out.println(findMedian(numbers, 0));
-	
 	}
 }
