@@ -1,7 +1,10 @@
-
+import java.lang.*;
+import java.util.*;
+import java.io.*;
 public class ArrayMajorityElement {
 
 	static int[] found;
+	static final int NUMBERS = 10;
 	
 	static String findMajorityNumber(int[] numbers, int n) {
 		int majority = 0;
@@ -10,13 +13,13 @@ public class ArrayMajorityElement {
 			for(int j = 0;j<n;j++) {
 				if(i == numbers[j]) {
 					found[i]++;
-				}
-				if(found[i] > majority) {
-					majority = found[i];
+					if(found[i] > majority) {
+						majority = i;
+					}
 				}
 			}
 		}
-		if(majority > n/2) {
+		if(found[majority] > n/2) {
 			return String.valueOf(majority);
 		} else {
 			return "No majority element.";
@@ -25,13 +28,34 @@ public class ArrayMajorityElement {
 
 	public static void main(String[] args) {
 		ArrayMajorityElement ame = new ArrayMajorityElement();
-		int[] numbers = {3, 3, 4, 2, 3};
-		int length = numbers.length;
-		found = new int[10];
-		for(int i = 0;i<10;i++) {
-			found[i] = 0;
-		}
+		BufferedReader stringBuffer; 
+		found = new int[NUMBERS];
+		int count = 0;
+		try {
+			String in;
+			String[] inputNumbers = null;
+			int size = 0;
+			int[] numbers = null;
+			stringBuffer = new BufferedReader(new InputStreamReader(System.in));
 		
-		System.out.println(findMajorityNumber(numbers, length));		
+			if ((in = stringBuffer.readLine()) != null) {
+				count = Integer.valueOf(in);
+			}
+			while(count > 0) {
+				for(int i = 0;i<NUMBERS;i++) {
+					found[i] = 0;
+				}
+				size = Integer.valueOf(stringBuffer.readLine());
+				numbers = new int[size];
+				inputNumbers = stringBuffer.readLine().split(" ");
+				for(int k = 0;k<size;k++) {
+					numbers[k] = Integer.valueOf(inputNumbers[k]);
+				}
+				System.out.println(findMajorityNumber(numbers, size));
+				count--;
+			}
+		} catch (IOException e) {
+			System.out.print("An " + e + " has occurred.");			
+		}	
 	}
 }
