@@ -9,20 +9,21 @@ public class ArrayMajorityElement {
 	static String findMajorityNumber(int[] numbers, int n) {
 		int majority = 0;
 		int m = found.length;
-		for(int i = 0;i<m;i++) {
-			for(int j = 0;j<n;j++) {
+		for(int j = 0;j<n;j++) {
+			for(int i = 0;i<m;i++) {
 				if(i == numbers[j]) {
 					found[i]++;
-					if(found[i] > majority) {
+					if(found[i] > found[majority]) {
 						majority = i;
-					}
+					} 
+						
 				}
 			}
 		}
-		if(found[majority] > n/2) {
+		if(found[majority]  > n/2) {
 			return String.valueOf(majority);
 		} else {
-			return "No majority element.";
+			return "NO Majority Element";
 		}
 	}
 
