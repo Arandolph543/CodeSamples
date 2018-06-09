@@ -3,7 +3,7 @@ public class ArrayMajorityElement {
 
 	static int[] found;
 	
-	static int findMajorityNumber(int[] numbers, int n) {
+	static String findMajorityNumber(int[] numbers, int n) {
 		int majority = 0;
 		int m = found.length;
 		for(int i = 0;i<m;i++) {
@@ -16,7 +16,11 @@ public class ArrayMajorityElement {
 				}
 			}
 		}
-		return majority;
+		if(majority > n/2) {
+			return String.valueOf(majority);
+		} else {
+			return "No majority element.";
+		}
 	}
 
 	public static void main(String[] args) {
