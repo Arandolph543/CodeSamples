@@ -21,18 +21,13 @@ public class LargestSubArrayOfX {
 				
 		}
 		return count;
-		
-		
 	}
-	
 
 	public static void main(String[] args) {
-		int[] numbers = {30,4, 77, 32, 9};
+		int[] numbers = {4, 4, 2, 0, 3, 8, 10, 0, 0, 14, 23, 9};
 		int numHeight = 24;
 		LargestSubArrayOfX smallestSubarray = new LargestSubArrayOfX();
 		System.out.println(smallestSubarray.findSmallestSubArrayOfX(numbers, numHeight));
 	}
-
-
 
 }

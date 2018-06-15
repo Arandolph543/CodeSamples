@@ -24,10 +24,7 @@ public class MatrixMultiple {
 				}
 			}
 		}
-				
-		
 		return operationValue;
-		
 	}
 
 	public static void main(String[] args) {
