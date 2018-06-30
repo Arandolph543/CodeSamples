@@ -16,7 +16,6 @@ public class ArrayMajorityElement {
 					if(found[i] > found[majority]) {
 						majority = i;
 					} 
-						
 				}
 			}
 		}

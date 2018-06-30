@@ -5,8 +5,8 @@ import java.util.*;
 
 public class WordBoggle {
 
-	public List<String> sortLettersIntoWords(List<String> dict,  String letters) {
-		List<String> words = new ArrayList<>();
+	public static List<String> sortLettersIntoWords(List<String> dict,  String letters) {
+		List<String> words = new ArrayList<String>();
 		int index = 0;
 		for(int k = 0;k<dict.size();k++) {
 			for(int i = 0;i<letters.length();i++) {
@@ -23,11 +23,8 @@ public class WordBoggle {
 		return words;	
 	}
 
-
-
 	public static void main(String[] args) {
-		WordBoggle wb = new WordBoggle();
-		List<String> wordListDictionary = new ArrayList<>();
+		List<String> wordListDictionary = new ArrayList<String>();
 		wordListDictionary.add("dog");
 		wordListDictionary.add("fern");
 		wordListDictionary.add("apple");
@@ -38,8 +35,4 @@ public class WordBoggle {
 		}
 	
 	}
-
-
-
-
 }

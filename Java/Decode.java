@@ -1,6 +1,5 @@
 public class Decode {
 
-
 	int decodeMessage(String number) {
 		System.out.println(number.length());
 		char[] length = new char[number.length()];

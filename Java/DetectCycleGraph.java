@@ -1,6 +1,6 @@
 public class DetectCycleGraph {
 
-
+	
 
 
 
@@ -12,11 +12,4 @@ public class DetectCycleGraph {
 	
 	
 	}
-
-
-
-
-
-
-
 }

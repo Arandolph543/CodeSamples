@@ -6,29 +6,29 @@ class StringPermutations {
 
 	void permute(String input) {
 		int inputLength = input.length();
-		boolean[ ] used = new boolean[ inputLength ];
+		boolean[] used = new boolean[inputLength];
 		StringBuffer outputString = new StringBuffer();
-		char[ ] charArray = input.toCharArray( );
+		char[] charArray = input.toCharArray();
   
-		doPermute ( charArray, outputString, used, inputLength, 0 );
+		doPermute(charArray, outputString, used, inputLength, 0);
 	}
 
-	void doPermute ( char[ ] charArray, StringBuffer outputString, boolean[ ] used, int inputLength, int level) {
-		if( level == inputLength) {
-			System.out.println ( outputString.toString()); 
+	void doPermute(char[] charArray, StringBuffer outputString, boolean[] used, int inputLength, int level) {
+		if(level == inputLength) {
+			System.out.println(outputString.toString()); 
 		}
 
 		for(int i = 0; i < inputLength; ++i) {       
-		   if( used[i] ) {
+		   if(used[i]) {
 			   level++;
 			   return;
 		   }
 
-			outputString.append( charArray[i] );      
+			outputString.append(charArray[i]);      
 			used[i] = true;       
-			doPermute( charArray, outputString, used, inputLength, level + 1 );       
+			doPermute(charArray, outputString, used, inputLength, level + 1);       
 			used[i] = false;       
-			outputString.setLength( outputString.length() - 1 );   
+			outputString.setLength(outputString.length() - 1);   
 		}
 	}
 	

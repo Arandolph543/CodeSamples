@@ -6,7 +6,7 @@ public class ArrayMissingNumberFinder {
 		if(n == 0) 
 			return i;
 		
-		for(int j = 1;j<n-1;j++) {
+		for(int j = 1;j<n;j++) {
 			if(nums[j] != j) {
 				return j;
 			}

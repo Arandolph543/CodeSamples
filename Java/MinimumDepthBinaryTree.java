@@ -35,9 +35,6 @@ public class MinimumDepthBinaryTree {
 		return Math.min(findMinimumDepth(root.right), findMinimumDepth(root.left)) + 1;
 	}
 
-
-
-
 	public static void main(String[] args) {
 		MinimumDepthBinaryTree tree = new MinimumDepthBinaryTree();
 		tree.root = new Node(3);
@@ -47,12 +44,6 @@ public class MinimumDepthBinaryTree {
 		tree.root.right.left = new Node(0);
 		tree.root.right.left.right = new Node(9);
 		System.out.println(tree.findMinimumDepth());
-	
-	
 	}
-
-
-
-
 }
 
