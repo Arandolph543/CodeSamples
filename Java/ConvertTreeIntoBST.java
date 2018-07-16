@@ -27,8 +27,8 @@ class ConvertTreeIntoBST {
 		dfs(tree.left);
 		list.add(tree.data);
 		dfs(tree.right);	
-	}
 	
+	}
 	void contructTree(Node root) {
 		if(root == null) 
 			return;
@@ -49,6 +49,7 @@ class ConvertTreeIntoBST {
 		Collections.reverse(list);
 		list.forEach(System.out::println);
 		stack.addAll(list);
+		
 		contructTree(root);
 		return root;		
 	}

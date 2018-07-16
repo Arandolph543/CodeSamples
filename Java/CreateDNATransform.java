@@ -16,9 +16,7 @@ class CreateDNATransform {
 		for(char item : array) {
 			System.out.print(String.valueOf(item).toString());
 		}
-	
-	
-	
 	}
 
 }
+
