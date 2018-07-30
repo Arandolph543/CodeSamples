@@ -9,14 +9,20 @@ public class SmallestDifferenceSubset {
 		for(int i = 0;i<array.length;i++) {
 			createSubset.push(array[i]);	
 		}
-		int[] subset1 = new int[array.length/2 +1];
-		int[] subset2 = new int[array.length/2 +1];
+		int length = array.length/2 +1;
+		int[] subset1 = new int[length];
+		int[] subset2 = new int[length];
 		int index = 0;
-		while(createSubset.empty() == false) {
-			subset1[index] = createSubset.pop();
-			subset2[index] = createSubset.pop();
+		while(index < length) {
+			if(createSubset.empty() == false) {
+				subset1[index] = createSubset.pop();
+			}
+			if(createSubset.empty() == false) {
+				subset2[index] = createSubset.pop();
+			}
 			index++;
 		}
+		
 		int sum1 = 0;
 		int sum2 = 0;
 		for(int m =0;m<index;m++) {
@@ -34,7 +40,7 @@ public class SmallestDifferenceSubset {
 	}
 
 	public static void main(String[] args) {
-		int[] array = {3, 5, 6, 7, 2, 0};
+		int[] array = {1,3,4,5,6,2,0};
 		System.out.println("Difference of subset: " + getSmallestSubsetDifference(array));		
 	}
 

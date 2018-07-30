@@ -16,7 +16,7 @@ class SmallestDifferenceSubsetRecursive {
 	
 	public static void main(String[] args) {
 		int[] array = {1,3,4,5,6,2,0};
-		int length = array.length;
+		int length = array.length-1;
 		System.out.println("Difference subset sum is: " + findDifference(array, length, 0, array[0]));	
 	}
 }

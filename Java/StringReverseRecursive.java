@@ -9,8 +9,8 @@ public class StringReverseRecursive {
 			return string;
 		} else {
 			reverse += string.charAt(string.length()-1) +
-				reverseString(string.substring(0, string.length()-1));
-				return reverse;
+			reverseString(string.substring(0, string.length()-1));
+			return reverse;
 		}	
 	}
 

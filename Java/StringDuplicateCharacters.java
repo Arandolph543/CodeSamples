@@ -9,14 +9,12 @@ public class StringDuplicateCharacters {
 		int duplicates = 0;
 		
 		for(char character: charArr) {
-			//System.out.println(character + " " + map.containsKey(character));
 			if(map.containsKey(String.valueOf(character))) {
 				duplicates++;
 				int n = map.get(String.valueOf(character));
 				map.remove(String.valueOf(character));
 				map.put(String.valueOf(character), n++);
 			} else {
-				//System.out.println("Adding character.");
 				map.put(String.valueOf(character), 1);
 			}
 		}
