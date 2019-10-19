@@ -1,3 +1,7 @@
+/* Description: LinkedList as a given number adding two lists.  
+Author: April Randolph
+Date: 07/28/18,10/19/2019 */
+
 class Node {
 	int data;
 	Node left;
@@ -20,12 +24,10 @@ class AddNumbersInLinkedList {
 			num2.append(list2.data);
 			list2 = list2.left;			
 		}
-		System.out.println("Debug: " + Integer.valueOf(num1.toString()) + Integer.valueOf(num2.toString()));
 		res = Integer.valueOf(num1.toString()) + Integer.valueOf(num2.toString());
 				
 		return res;
 	}
-	
 
 	public static void main(String[] arg) {
 		Node variableConstant1 = new Node(1);
@@ -37,7 +39,6 @@ class AddNumbersInLinkedList {
 		variableConstant2.left = new Node(7);
 		variableConstant2.left.left = new Node(3);
 		
-		System.out.println(addLists(variableConstant1, variableConstant2));
-	
+		System.out.println(addLists(variableConstant1, variableConstant2));	
 	}
 }
