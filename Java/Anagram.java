@@ -24,14 +24,12 @@ class Anagram {
             numOfInputs = Integer.parseInt(buffer.readLine());
             sentences = new String[numOfInputs*2];
             anagram = new Boolean[numOfInputs];
-            for(int i = 0; i< numOfInputs*2;i++) {
+            for(int i = 0; i< sentences.length;i++) {
                 sentences[i] = buffer.readLine(); 
-				
             }  
 			int count = 0;
-			
-			for(int d = 0;d<numOfInputs;d++) {
-				anagram[d] = anagramClass.isAnagram(sentences[count], sentences[count+1]);
+			for(int d = 0;d<sentences.length;d++) {
+				anagram[count] = anagramClass.isAnagram(sentences[d], sentences[d++]);
 				count++;
 			}   
 			for(int l=0;l<numOfInputs;l++) {
