@@ -1,3 +1,7 @@
+/*Desciption: Bubble sort of an array of integers returning a Hashmap.
+Author: April Randolph
+Date: 09/18/18, 10/19/19*/
+
 import java.util.*;
 
 public class BubbleSort {

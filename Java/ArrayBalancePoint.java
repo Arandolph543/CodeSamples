@@ -1,3 +1,7 @@
+/* Description: Given and array of numbers find the summation mid-point.
+Author: April Randolph
+Date: 06/28/2018, 10/19/2019 */
+
 public class ArrayBalancePoint {
 
 	static int arrayPointBalance(int[] arr) {
@@ -24,6 +28,5 @@ public class ArrayBalancePoint {
 	public static void main(String[] args) {
 		int[] array = {2, 3, 80, 1, 4};
 		System.out.println(arrayPointBalance(array));
-
 	}
 }

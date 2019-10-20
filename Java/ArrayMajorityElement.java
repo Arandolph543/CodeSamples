@@ -1,6 +1,11 @@
+/* Description: Array of integers finding the majority number and returns the integer.
+Author: April Randolph
+Date: 6/30/2018,10/19/2019 */
+
 import java.lang.*;
 import java.util.*;
 import java.io.*;
+
 public class ArrayMajorityElement {
 
 	static int[] found;
