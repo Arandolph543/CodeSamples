@@ -1,6 +1,6 @@
 /* Description: Array of integers finding the majority number and returns the integer.
 Author: April Randolph
-Date: 10/19/2019 */
+Date: 6/30/2018,10/19/2019 */
 
 import java.lang.*;
 import java.util.*;
