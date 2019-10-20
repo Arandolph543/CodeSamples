@@ -1,3 +1,6 @@
+/*Description: Array of Integers finds the largest subarray of a given k.
+Author:April Randolph
+Date: 05/29/2018, 10/19/2019 */
 
 public class ArrayKMaximumSum {
 
