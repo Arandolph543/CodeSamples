@@ -1,6 +1,6 @@
 /* Description: Takes two String as binary numbers.  Added the the integers as String.
 Author: April Randolph
-Date: 5/21/18, 10/19/2019 */
+Date: 10/19/2019 */
 
 import java.lang.*;
 
