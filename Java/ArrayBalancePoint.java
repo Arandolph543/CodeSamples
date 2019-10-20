@@ -1,6 +1,6 @@
 /* Description: Given and array of numbers find the summation mid-point.
 Author: April Randolph
-Date: 06/07/2018, 10/19/2019 */
+Date: 06/28/2018, 10/19/2019 */
 
 public class ArrayBalancePoint {
 
