@@ -1,5 +1,8 @@
-import java.lang.Character;
+/*Description: With string arrays use the rules of Boogle to determine if you win Boogle.
+Author: April Randolph
+Date: 06/07/18, 10/21/2019 */
 
+import java.lang.Character;
 
 class Boggle {
 
@@ -87,7 +90,7 @@ class Boggle {
 	}
 
 	public static void main(String[] args) {
-		String[] words = {"FACEBOOK", "LIME", "MARKER", "GEEK", "TOCK"};
+		String[] words = {"FACEBOOK", "MARKER", "GEEK", "TOCK"};
 		String dictionary[] = {"GEEKS", "FOR", "QUIZ", "GEE"};
 
 		TrieNode root = new TrieNode();
@@ -106,7 +109,4 @@ class Boggle {
         };
 		isWord(boggle, root);	
 	}
-	
-
 }
-

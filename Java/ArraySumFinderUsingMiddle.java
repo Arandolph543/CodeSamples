@@ -1,3 +1,7 @@
+/*Description: Problem from java2Novice int array finding the middle index with equal sums on both sides.
+- See more at: http://www.java2novice.com/java-interview-programs/find-middle-index/#sthash.VG4a10Kr.dpuf
+Author: April Randolph
+Date: 10/20/2019 */
 
 public class ArraySumFinderUsingMiddle {
  
@@ -38,4 +42,3 @@ public class ArraySumFinderUsingMiddle {
 }
  
  
-- See more at: http://www.java2novice.com/java-interview-programs/find-middle-index/#sthash.VG4a10Kr.dpuf

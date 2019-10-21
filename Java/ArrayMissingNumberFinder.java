@@ -1,3 +1,7 @@
+/* Description: Array of integers with a missing number returns the integer missing from the array.
+Author: April Randolph
+Date: 10/20/2019 */
+
 public class ArrayMissingNumberFinder {
 
 	static int findMissingNumber(int[] nums) {
@@ -18,6 +22,5 @@ public class ArrayMissingNumberFinder {
 		int[] numbers = {0, 1, 2, 3, 4, 5, 7, 8, 9};
 		System.out.println(findMissingNumber(numbers));
 	}
-
 }
 	

@@ -1,3 +1,7 @@
+/* Description: Given a sequence instruction decode the given string. 
+Author: April Randolph
+Date: 05/6/18, 10/21/2018 */
+
 import java.lang.StringBuilder;
 import java.lang.Character;
 
@@ -28,15 +32,9 @@ public class DecodeString {
 		return decodedResultString.toString();
 	}
 
-
-
 	public static void main(String[] args) {
 		String stringInput = "3[ds[4kj]]";
 		DecodeString decode = new DecodeString();
 		System.out.println(decode.stringDecoder(stringInput));
 	}
-
-
-
-
 }
