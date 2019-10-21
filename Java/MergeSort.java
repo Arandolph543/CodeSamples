@@ -1,4 +1,8 @@
-public class MergeSort2 {
+/* Description: MergeSort with an integer array. 
+Author: April Randolph
+Date: 10/21/2019 */
+
+public class MergeSort {
 
 	public static int[] mergeUtil(int[] arr, int l, int m, int r) {
 		int n1 = m-l+1;
@@ -56,7 +60,7 @@ public class MergeSort2 {
 
 
 	public static void main(String[] args) {
-		MergeSort2 mergeSort = new MergeSort2();
+		MergeSort mergeSort = new MergeSort();
 		int[] arr = {3, 4, 6, 2, 14, 0};
 		arr = mergeSort.sort(arr, 0, arr.length-1);
 		for(int i = 0;i< arr.length;i++) {
