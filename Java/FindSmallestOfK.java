@@ -1,3 +1,7 @@
+/*Description: Find the smallest array of size k.
+Author: April Randolph
+Date: 10/20/2019 */
+
 import java.util.*;
 import java.lang.*;
 
