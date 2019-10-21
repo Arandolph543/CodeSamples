@@ -1,3 +1,7 @@
+/*Description: A string is given and returns if the parentheses are equally balanced.
+Author: April Randolph
+Date: 10/20/2019 */
+
 import java.util.Stack;
 
 public class BalancedParentheses {
