@@ -1,8 +1,8 @@
 public class BalancedBinarySearchTree {
 
 	static Node root;
+	
 	static class Node {
-		
 		int data;
 		Node left, right;
 		Node(int data) {
@@ -51,10 +51,7 @@ public class BalancedBinarySearchTree {
 		}
 		print(head.left); 
 		System.out.println(head.data + " ");
-		print(head.right);
-		
-		
-		
+		print(head.right);		
 	}
 	
 	public static void main(String[] args) {
@@ -62,7 +59,6 @@ public class BalancedBinarySearchTree {
 		int n = numbersArrayUnsorted.length;
 		balancedBinarySearchTree(numbersArrayUnsorted, n);
 		print(root);
-	
 	}
 
 }
