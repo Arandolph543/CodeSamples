@@ -1,4 +1,8 @@
-public class BalancedBinarySearchTree {
+/*Description: Integer array into a a Linkedlist tree using binary search
+Author: April Randolph
+Date: 10/20/2019 */
+
+public class BinarySearchTreeResult {
 
 	static Node root;
 	static class Node {
@@ -11,7 +15,7 @@ public class BalancedBinarySearchTree {
 		}
 	}
 
-	static void balancedBinarySearchTree(int[] arr, int n) {
+	static void BinarySearchTreeResult(int[] arr, int n) {
 		int middle = n/2;
 		
 		for(int i = 0;i<n;i++) {
