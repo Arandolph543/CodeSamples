@@ -1,13 +1,14 @@
+/*Description: Given a integer convert to roman numeral. 
+Author: April Randolph
+Date:07/9/2018,10/21/2019 */
+
 import java.util.*;
 
 public class ConvertToRomanNumeral {
 
 	Map<Integer,String> romanNumerals;
 
-
-
 	void createRomanNumerals() {
-		
 		romanNumerals = new HashMap<>();
 		romanNumerals.put(1,"I");
 		romanNumerals.put(5,"V");
@@ -16,7 +17,6 @@ public class ConvertToRomanNumeral {
 		romanNumerals.put(100,"C");
 		romanNumerals.put(500,"D");
 		romanNumerals.put(1000,"M");
-		
 	}
 
 	String convertNumber(int number) {
@@ -123,19 +123,11 @@ public class ConvertToRomanNumeral {
 		}
 		return roman;
 	}
-
 	
 	public static void main(String[] args) {
 		ConvertToRomanNumeral convertToRomanNumeral = new ConvertToRomanNumeral();
 		int number = 2000;
 		convertToRomanNumeral.createRomanNumerals();
 		System.out.println("Value of : " + number + " to " + convertToRomanNumeral.convertNumber(number));
-		
-		
-		
 	}
-
-
-
-
 }
