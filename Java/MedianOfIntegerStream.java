@@ -1,3 +1,7 @@
+/* Description: Given an unsorted array of integers using primitive types to find the median value.
+Author: April Randolph
+Date: 05/28/2018, 10/21/2019 */
+
 public class MedianOfIntegerStream {
 
 	static int findMedian(int[] array, int index) {
