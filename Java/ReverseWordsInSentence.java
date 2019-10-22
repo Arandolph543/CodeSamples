@@ -1,7 +1,6 @@
 /* Author: April Randolph
 Description: A program that takes a sentence and reverses the words. 
-Date: 06/27/17
-*/
+Date: 06/27/17, 10/22/2019 */
 
 import java.lang.*;
 import java.util.*;
