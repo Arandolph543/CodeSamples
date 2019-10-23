@@ -1,3 +1,7 @@
+/*Description: Finds the average diagonal sum with 2D int matrice.
+Author:April Randolph
+Date: 07/18/2017,10/23/2019 */
+
 import java.io.*;
 import java.util.*;
 import java.text.*;
@@ -11,18 +15,15 @@ public class DiagonalSumValueTwoDimArray {
         int avgSumNumber = 0;
         int firstDiagonalSum = 0;
         int secondDiagonalSum = 0;
-		for(int i=0;i<a.length;i++) {
-			firstDiagonalSum = Math.abs(a[i][i] + firstDiagonalSum);
-			secondDiagonalSum =  Math.abs(secondDiagonalSum + a[i][n - i -1]);
-		}
+	for(int i=0;i<a.length;i++) {
+		firstDiagonalSum = Math.abs(a[i][i] + firstDiagonalSum);
+		secondDiagonalSum =  Math.abs(secondDiagonalSum + a[i][n - i -1]);
+	}
           
-        avgSumNumber = Math.abs(firstDiagonalSum - secondDiagonalSum);
-        
+        avgSumNumber = Math.abs(firstDiagonalSum - secondDiagonalSum);      
         return avgSumNumber;
     }
-    
-    
-    
+       
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
