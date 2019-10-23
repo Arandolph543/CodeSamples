@@ -1,3 +1,7 @@
+/*Description: Given an int array for the hieghts of graph find the largest area as an int.
+Author:April Randolph
+Date: 07/19/2017, 10/23/2019 */
+
 import java.lang.*;
 import java.util.*;
 import java.io.*;
@@ -43,7 +47,6 @@ public class HistogramLargestArea {
 		while(index <= m) {
 			if(left.empty() || heights[index] > left.peek()  ) {
 				left.push(heights[index]);
-				System.out.println("Debug: " + left.peek());
 			} 
 			if(tp == 0 || left.peek() < tp) {
 				tp = left.peek();
@@ -118,7 +121,4 @@ public class HistogramLargestArea {
 		}
 		return inputMap;
 	}
-
-
-	
 }
