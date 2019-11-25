@@ -45,10 +45,6 @@ class ConvertTreeIntoBST {
 
 	Node convertBinaryToBST(Node root) {
 		dfs(root);
-		Set<Integer> set = new HashSet<>();
-		set.addAll(list);
-		list.clear();
-		list.addAll(set);
 		Collections.sort(list);
 		Collections.reverse(list);
 		list.forEach(System.out::println);
