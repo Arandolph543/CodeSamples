@@ -1,6 +1,9 @@
+/*Description: Converts a ternary string into a binary tree.
+Author:April Randolph
+Date: 4/28/2018, 05/21/2019 */
+
 import java.lang.*;
 import java.util.*;
-
 
 class ConvertTernaryIntoBinaryTree {
 	
@@ -25,8 +28,6 @@ class ConvertTernaryIntoBinaryTree {
 		
 		if(index < inputStatement.length && inputStatement[index] == ':') {
 			root.left = parseTernaryValueIntoArray(inputStatement, index+1);
-		
-		
 		} else if(index < inputStatement.length) {
 			root.right = parseTernaryValueIntoArray(inputStatement, index+1);
 		}
