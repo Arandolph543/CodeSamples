@@ -4,7 +4,19 @@ Author: April Randolph
 Date: 10/20/2019 */
 
 public class ArraySumFinderUsingMiddle {
- 
+    
+    int[] sum = new int[2];
+    int sumLeft;
+    int sumRight;
+
+    public static int[] getLeftRightSums() {
+         if(sumLeft > 0 && sumRight > 0) {
+            sum[0] = sumLeft;
+            sum[1] = sumRight;
+         }
+         return sum;
+    }
+
     public static int findMiddleIndex(int[] numbers) throws Exception {
  
         int endIndex = numbers.length - 1;
@@ -38,6 +50,8 @@ public class ArraySumFinderUsingMiddle {
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
+        int[] arr = getLeftRightSums();
+        System.out.println("The array has the sum1 of " + sum[0] + " and the sum2 is " + sum[1]);
     }
 }
  
