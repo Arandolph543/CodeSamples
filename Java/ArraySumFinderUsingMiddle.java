@@ -5,9 +5,9 @@ Date: 10/20/2019 */
 
 public class ArraySumFinderUsingMiddle {
     
-    int[] sum = new int[2];
-    int sumLeft;
-    int sumRight;
+    static int[] sum = new int[2];
+    static int sumLeft;
+    static int sumRight;
 
     public static int[] getLeftRightSums() {
          if(sumLeft > 0 && sumRight > 0) {
@@ -21,8 +21,8 @@ public class ArraySumFinderUsingMiddle {
  
         int endIndex = numbers.length - 1;
         int startIndex = 0;
-        int sumLeft = 0;
-        int sumRight = 0;
+        sumLeft = 0;
+        sumRight = 0;
         while (true) {
             if (sumLeft > sumRight) {
                 sumRight += numbers[endIndex--];
@@ -51,7 +51,7 @@ public class ArraySumFinderUsingMiddle {
             System.out.println(ex.getMessage());
         }
         int[] arr = getLeftRightSums();
-        System.out.println("The array has the sum1 of " + sum[0] + " and the sum2 is " + sum[1]);
+        System.out.println("The array has the sum1 of " + arr[0] + " and the sum2 is " + arr[1]);
     }
 }
  
