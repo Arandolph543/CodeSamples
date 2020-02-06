@@ -1,3 +1,6 @@
+/*Description: Given an integer array give the sorted array in O(N) as ArrayList.
+Author: April Randolph
+Date: 07/29/2011, 10/19/2019, 02/06/2020*/
 import java.util.*;
 import java.io.*;
 

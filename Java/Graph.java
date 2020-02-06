@@ -62,7 +62,7 @@ class Graph {
 		for(i=0;i<V;i++)
 			subsets[i] = new Subset();
 		
-		for(int v =0;v<V;++v){
+		for(int v =0;v<V;++v) {
 			subsets[v].parent = v;
 			subsets[v].rank = 0;
 		}

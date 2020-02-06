@@ -1,4 +1,4 @@
-/* Description: Given a String find the lexographical string and sum of numbers. 
+/* Description: Given a String find the lexicographical string and sum of numbers. 
 Author: April Randolph
 Date: 10/19/2019 */
 
