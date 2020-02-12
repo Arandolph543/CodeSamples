@@ -1,3 +1,8 @@
+/* Description: The string from the user is a space separated input of integers after the number of inputs and the length of the integers is specified.  
+The numbers are then arranged to alternate from first maximum then first minimum. 
+Author: April Randolph
+Date: 02/12/2020
+*/
 import java.util.*;
 import java.lang.*;
 import java.io.*;
