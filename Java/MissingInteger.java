@@ -9,7 +9,45 @@ import java.lang.*;
 
 class MissingInteger {
 
-    static int[] findInteger(int[] A) {
+	static int findInteger(int[] A) {
+		int length = A.length;
+		int missingNum = 0;
+		if(length==0)
+			return A;
+
+		Arrays.sort(A);
+		int[] tempArray = new int[length*length];		
+		for(j = 0;j<tempArray.length;j++) {
+			for(int k=0;k<A.length;k++) {
+				if(A[k]==j)
+					tempArray[j] = 1;
+			}
+		}
+		for(int i = 1;i<A[length-1]+1;i++) {
+			for(int k=0;k<A.length;k++) {
+				if(tempArray[i] != 1) {
+					missingNum = i;
+				}
+			}
+		}
+		if(missingNum>0
+			return missingNum;
+		boolean increasingArray = false;
+		for(int i = 0;i<length;i++) {
+			if(A[i]==(i+1)) {
+				increasingArray = true;
+			}
+		}
+		if(increasingArray)
+			return (A[length-1]+1);
+		if(A[length-1]<=0) {
+			missingNum = 1;
+		}
+		
+		return missingNum;
+	}
+
+    static int[] findIntegers(int[] A) {
 		int length = A.length;
 		
 		if(length==0)
@@ -26,7 +64,6 @@ class MissingInteger {
 		}
 		int[] missingNums = new int[A.length*A.length];
 			
-		int m = -1;
 		for(int i = 1;i<A[length-1]+1;i++) {
 			for(int k=0;k<A.length;k++) {
 				if(tempArray[i] != 1) {
