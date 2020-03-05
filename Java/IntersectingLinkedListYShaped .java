@@ -37,16 +37,60 @@ class IntersectingLinkedListYShaped {
 
 
 	public static void main(String[] args) {
-		Node node = new Node(3);
-		root = new Node(7);
-		root.next = new Node(0);
-		root.next.next = new Node(290);
-		root.next.next.next = new Node(4);
-		node.next = new Node(7);
-		node.next = root.next.next.next;
-		node.next.next = new Node(3);
-		Node newNode = findIntersectingNodeInYShapedLinkedList(root, node, 4);
-		System.out.println("The node that is connected: " + newNode.data);
+		try {
+			BufferedReader inputStringReader = new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Please enter the two lists of Nodes of numbers press enter after the first list is entered with 6 element and 3 elements.");
+			String str1 = inputStringReader.readLine();
+			String str2 = inputStringReader.readLine();
+			int len = str1.length();
+			int[] arrayNodeIntegersList = new int[len];
+			int[] arrayNodeIntegersList1 = new int[len];
+			int index = 0;
+			for(int i = 0;i<str1.length();i++) 
+				arrayNodeIntegersList[i] = Integer.parseInt(String.valueOf(str1.charAt(i)));
+			for(int i = 0;i<str2.length();i++) 
+				arrayNodeIntegersList1[i] = Integer.parseInt(String.valueOf(str2.charAt(i)));
+			Node node = new Node(arrayNodeIntegersList1[0]);
+			for(Integer val : arrayNodeIntegersList) {
+				int tempInd = index;
+				Node tempNode = root;
+				if(arrayNodeIntegersList1[tempInd]!=val && index==tempInd && index<3) {
+					root = new Node(val);
+					tempNode = root;
+					tempInd++;
+				} else if(arrayNodeIntegersList1[tempInd]!=val && index==tempInd && index<3) {
+					root.next = new Node(val);
+					tempNode = root;
+					tempInd++;
+				} else if(arrayNodeIntegersList1[tempInd]!=val && index==tempInd && index<3) {
+					root.next.next = new Node(val);
+					tempNode = root;
+					tempInd++;
+				} else if(arrayNodeIntegersList1[index]!=val && index==tempInd && index<3) {
+					root.next.next.next = new Node(val);
+					tempNode = root;
+					tempInd++;
+				} else {
+					index++;
+					node.next = tempNode;
+				}
+			}
+			while(index<3) {
+				if(index==0)
+					node.next = new Node(arrayNodeIntegersList1[1]);
+				if(index==1)
+					node.next = new Node(arrayNodeIntegersList1[0]);
+				if(index==2)
+					node.next.next = new Node(arrayNodeIntegersList1[2]);
+				index++;
+					
+			}
+				Node newNode = findIntersectingNodeInYShapedLinkedList(root, node, 4);
+			System.out.println("The node that is connected: " + newNode.data);
+		} catch(IOException ex){
+			System.out.println(ex);
+		}
+		
 	}
 
 }
