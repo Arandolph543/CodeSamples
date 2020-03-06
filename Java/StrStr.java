@@ -8,7 +8,6 @@ import java.io.*;
 
 class StrStr {
 
-
 	static int findStringIndex(String phrase, String findString) {
 		int ind = 0;
 		int lengthX = phrase.length();
@@ -34,11 +33,12 @@ class StrStr {
 	public static void main(String[] args) {
 		String startString = "Goodphrasethatiswords.";
 		BufferedReader stringBuffer = new BufferedReader(new InputStreamReader(System.in));
-		try{
+		try {
 			String input = stringBuffer.readLine();
 			System.out.println(findStringIndex(startString, input) + " The " + startString + " at index starts the substring that is " + input);
 		} catch(IOException ex) {
 			System.out.println(ex);
 		}
 	}
+
 }

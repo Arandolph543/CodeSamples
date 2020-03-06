@@ -54,7 +54,6 @@ class WaterTrappedByRain {
 		return trapped;
 	}
 
-
 	public static void main(String[] args) {
 		try {
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
@@ -73,9 +72,5 @@ class WaterTrappedByRain {
 		} catch(IOException ex) {
 			System.out.println(ex);
 		}
-
-
 	}
-
-
 }

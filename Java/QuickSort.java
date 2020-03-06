@@ -4,12 +4,13 @@ import java.io.*;
 
 class QuickSort {
 
-
 	public static int partition(int[] arr, int low, int high) {
 		int i = low-1;
-		int pivot = arr[high];
+		System.out.println("Debug: " + arr[low] + " " + low + " " + high);
+		int pivot = arr[high-1];
 		for(int k =low;k<high;k++) {
 			//element is less than pivot
+		System.out.println("Debug: " + arr[k] + " " + pivot + " " + i);
 			if(arr[k] < pivot) {
 				i++;
 				//swap with arr[i]
@@ -19,20 +20,19 @@ class QuickSort {
 				
 			}
 		}
+		int swap =  arr[high-1];
+		arr[high-1] = arr[i+1];
+		arr[i+1] = swap;
 		
-		int swap =  arr[high];
-		arr[high] = arr[i+1];
-		arr[i+1] = swap;		
 		return i+1;
 	}
-
 
 	public static int[] sort(int[] array, int i, int j) {
 		if(i<j) {
 			int pari = partition(array, 0, j);
 			
 			sort(array, i, pari-1);
-			sort(array, pari-1, j);
+			sort(array, pari+1, j);
 		}
 		return array;
 	}
@@ -40,23 +40,20 @@ class QuickSort {
 	public static void main(String[] args) {
 		System.out.println("Please enter the number array for quick sort:");
 		BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
-		int[] integerlist = {};
 		int arrIndex = 0 ;
 		try {
-			int length = Integer.valueOf(buffer.readLine());
-			integerlist = new int[length];
-			String x = "";
-			while((x = buffer.readLine())!= null) { 
-				integerlist[arrIndex] = Integer.valueOf(x.toString());
-				arrIndex++;
+			int length = Integer.parseInt(buffer.readLine());
+			String[] arrInput = buffer.readLine().split(" ");
+			int[] integerlist = new int[arrInput.length];
+			for(int i = 0;i<arrInput.length;i++) {
+				integerlist[i] = Integer.parseInt(arrInput[i]);
 			}
+			integerlist = sort(integerlist, 0, integerlist.length);
+			System.out.print(Arrays.toString(integerlist));
+			
 		} catch(IOException ex) {
 			System.out.print(ex);
 		}
 		
-		integerlist = sort(integerlist, 0, integerlist.length-1);
-		System.out.print(Arrays.toString(integerlist));
 	}
-
-
 }
