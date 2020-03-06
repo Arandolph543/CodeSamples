@@ -1,3 +1,8 @@
+/*Description: Using the delta find the number of the most employees that can have the highest amount of chocolates given the number of chocolates that are distributed in 5, 2, 1 quantities at a time for three employees.
+Author: April Randolph
+Date: 03/06/20*/
+
+
 import java.io.*;
 import java.util.*;
 
