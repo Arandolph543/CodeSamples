@@ -36,7 +36,4 @@ class LongestSubsequence {
 			System.out.println(ex);
 		}
 	}
-	
-	
-	
 }
