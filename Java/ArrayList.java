@@ -1,3 +1,7 @@
+/*Description: Create an ArrayList class without using the java ArrayList with the same functions. 
+Author: April Randolph
+Date: 03/06/20*/
+
 import java.lang.*;
 import java.util.Arrays;
 
