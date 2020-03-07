@@ -1,3 +1,8 @@
+/*Description: Using the interface gives an overview of the working network the program is run on giving name, address and attribute of network 
+as a diagnostic tool.
+Author: April Randolph
+Date: 03/07/20*/
+
 import java.io.*;
 import java.net.*;
 import java.util.*;
