@@ -1,6 +1,8 @@
 /* Description: LinkedList as a given number adding two lists.  
 Author: April Randolph
 Date: 07/28/18,10/19/2019 */
+import java.util.*;
+import java.lang.*;
 
 class Node {
 	int data;
