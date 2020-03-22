@@ -33,7 +33,15 @@
 	
 	public static void main (String[] args) {
 		char[][] matrix = {{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}};
+		System.out.println("Matrix: ");
+		for(int i = 0;i<matrix.length;i++) {
+			for(int j = 0;j<matrix[0].length;j++) {
+				if(j==0 && i>=1)
+					System.out.print("\n");
+				System.out.print(matrix[i][j] + " ");
+			}
+		}
 		MaximalSquareRectangle msrClass = new MaximalSquareRectangle();
-		System.out.println(msrClass.maximalRectangle(matrix));		
+		System.out.println("\n" + msrClass.maximalRectangle(matrix));		
 	}
  }
