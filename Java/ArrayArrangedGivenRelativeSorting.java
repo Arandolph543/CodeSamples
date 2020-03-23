@@ -1,3 +1,9 @@
+/*Description: Given the number of inputs with the second line the array lengths then the two arrays for each input find the relative sorting.
+Author: April Randolph
+Date: 03/22/20
+*/
+
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
