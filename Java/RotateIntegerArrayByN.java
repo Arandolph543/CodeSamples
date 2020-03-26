@@ -4,45 +4,72 @@ Date: 02/28/2020*/
 
 import java.util.*;
 import java.lang.*;
-
+import java.io.*;
 
 class RotateIntegerArrayByN {
 
 	static int[] rotateArray(int[] arr, int n) {
 		
 		int length = arr.length;
-		int zeroArrCount = 0;
-		int[] rotateArray = new int[length];
-		
 		if(length==0 || length==1)
 			return arr;
 		
-		int[] NArray = new int[length];
+		//If there's a negative value given
+		if(n<0)
+			n = length - Math.abs(n);
+		
+		n = ((n%length) + length) % length;
 
-		int[] Array = new int[length];
-		int i  = 0;
-		Arrays.sort(arr);
-		
-        System.arraycopy(arr, 0, rotateArray, 0, n);
-		System.out.println("Debug: " + Arrays.toString(rotateArray) + Arrays.toString(Array));
-        System.arraycopy(arr, n, rotateArray, n, length);
-		System.out.println("Debug: " + Arrays.toString(rotateArray) + Arrays.toString(Array));
-		
-		if(arr[0]==1 && arr[length-1]==length)
-			return arr;
-		for(i = 0;i<length;i++) {
-			if(rotateArray[i]==0)
-				zeroArrCount++;
+		for(int i =0,gcd = gcd(n,length);i<gcd;i++) {
+			int temp = arr[i];
+			int j = i;
+			while(true) {
+				int d = j+n;
+				if(d>= length) {
+					d = d - length;
+				}
+				if(d==i) {
+					break;
+				}
+				arr[j] = arr[d];
+				j=d;
+			}
+			arr[j] = temp;
+					
 		}
-		if(zeroArrCount==length)
-			return arr;
 		
-		return rotateArray;
+		return arr;
 
 	}
 
+	public static int gcd(int a, int b) {
+		if(b==0) {
+			return a;
+		} else {
+			return gcd(b, a%b);
+		}
+	}
+
+
 	public static void main(String[] args) {
-		int[] array = {1, 2, 3, 4, 5, 6, 7};
-		System.out.println("Array " + Arrays.toString(array) + " " + Arrays.toString(rotateArray(array, 5)));
+		try {
+			BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Please the number or arrays to rotate then enter the length of the array and a space and the rotate amount then enter and the array with spaces: ");
+			int countStacks = Integer.parseInt(buf.readLine());
+			while(countStacks>0) {
+				String[] inputNumbers = buf.readLine().split(" ");
+				int rotateIndice = Integer.parseInt(inputNumbers[1]);
+				int[] array = new int[Integer.parseInt(inputNumbers[0])];
+				String[] input = buf.readLine().split(" ");
+				for(int i = 0;i<input.length;i++) {
+					array[i] = Integer.parseInt(input[i]);
+				}
+				System.out.print("The array " + Arrays.toString(array) + " " + Arrays.toString(rotateArray(array, rotateIndice)));
+				countStacks--;
+			}
+			
+		} catch(IOException ex) {
+			System.out.println(ex);			
+		}
     }
 }
