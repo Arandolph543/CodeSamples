@@ -1,13 +1,14 @@
 /*Description: Take from the user the number of Subsequences as a String.  Return the longest common subsequence between the 
 two. Find the best space time complexity.
 Author: April Randolph
+Date: 03/26/20
 */
 
 import java.util.ArrayList;
 import java.lang.*;
 import java.io.*;
 
-class LongestSubsequence {
+class LongestCommonSubsequence {
 	
 	static int findCommonSubsequence(char[] phrase1, char[] phrase2, int m, int n) {
 		int[][] L = new int[m+1][n+1];
