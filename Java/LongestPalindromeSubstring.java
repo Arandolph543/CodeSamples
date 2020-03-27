@@ -1,4 +1,8 @@
+/*Description: Find the longest palindrome substring.
+Author: April Randolph
+Date: 03/26/2020*/
 
+import java.io.*;
 public class LongestPalindromeSubstring {
 	public static String longestPalindrome(String s) {
 		if(s==null || s.length()<=1)
@@ -12,7 +16,7 @@ public class LongestPalindromeSubstring {
 		for(int l=0; l<len; l++) {
 			for(int i=0; i<len-l; i++) {
 				int j = i+l;
-				if(s.charAt(i)==s.charAt(j) && (j-i<=2||dp[i+1][j-1])){
+				if(s.charAt(i)==s.charAt(j) && (j-i<=2||dp[i+1][j-1])) {
 					dp[i][j]=true;
 	 
 					if(j-i+1>maxLen) {
@@ -27,8 +31,19 @@ public class LongestPalindromeSubstring {
 	}
 	
 	public static void main(String[] a) {
-		String stack = "thiht"; 
-		String answerResponse =longestPalindrome(stack);
-		System.out.println(answerResponse.toString());
+		try {
+			BufferedReader buf = new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Please enter the string to find palindrome: ");
+			int countStacks = Integer.parseInt(buf.readLine());
+			while(countStacks>0) {
+				String inputString = buf.readLine();
+				String answerResponse =longestPalindrome(inputString);
+				System.out.println(answerResponse.toString());
+				countStacks--;
+			}
+			
+		} catch(IOException ex) {
+			System.out.println(ex);			
+		}
 	}
 }

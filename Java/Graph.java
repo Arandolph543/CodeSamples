@@ -1,3 +1,6 @@
+/*Description: Find the edge weights. 
+Author: April Randolph
+Date: 10/19/2019, 02/06/2020*/
 import java.util.*;
 import java.lang.*;
 import java.io.*;
@@ -81,8 +84,10 @@ class Graph {
 			}
 		
 		}
-		for(i = 0;i<e;++i)
+		System.out.println("Resulting graph:");
+		for(i = 0;i<e;++i) {
 			System.out.println(result[i].src+ " " + result[i].dst + " " + result[i].weight);
+		}
 		
 	}
 	
@@ -111,6 +116,8 @@ class Graph {
 		graph.edges[4].src = 2;
 		graph.edges[4].dst = 3;
 		graph.edges[4].weight = 4;
+		for(int i = 0;i<5;++i)
+			System.out.println(graph.edges[i].src+ " " + graph.edges[i].dst + " " + graph.edges[i].weight);
 		
 		graph.KruskalMST();
 	}

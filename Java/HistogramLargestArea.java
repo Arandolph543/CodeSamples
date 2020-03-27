@@ -1,8 +1,9 @@
-/*Description: Given an int array for the hieghts of graph find the largest area as an int.
+/*Description: Given an int array for the heights of graph find the largest area as an int.
 Author:April Randolph
 Date: 07/19/2017, 10/23/2019 */
 
 import java.lang.*;
+import java.util.ArrayList;
 import java.util.*;
 import java.io.*;
 
@@ -14,7 +15,7 @@ public class HistogramLargestArea {
 	public int[] areaInHistogram() {
 		int[] greatestArea = new int[inputMap.get(0).size()];
 		int[] heightArray = null;
-		List<String> values = new ArrayList<String>();
+		ArrayList<String> values = new ArrayList<String>();
 
 		//Creating array from input
 		int mid = 0;
@@ -106,7 +107,7 @@ public class HistogramLargestArea {
 		HashMap<Integer,String> histogramMaps = new HashMap<>();
 		inputMap = new HashMap<Integer, HashMap<Integer,String>>();
 		try {
-			while(count > 0&& buffer.readLine() != null) {
+			while(count > 0 && buffer.readLine() != null) {
 				System.out.println("Please enter how many heights?");
 				heightsCount = Integer.valueOf(buffer.readLine());
 				System.out.println("Please enter number inputs of heights?");
