@@ -4,9 +4,7 @@ Date: 03/22/20
 */
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Collections;
-import java.util.stream.IntStream;
 import java.lang.*;
 import java.io.*;
 
@@ -28,7 +26,6 @@ class FindLambdaArrayOrder {
 	
 	public static void main(String[] arg) {
 		DefineLambdaSortForIntegersGreatestToSmallest();
-		
 	}
 
 }
