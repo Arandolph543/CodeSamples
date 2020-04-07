@@ -60,6 +60,8 @@ class PartionedLinkedListOfK {
 		root.next.next.next.next = new ListNode(10);
 		root.next.next.next.next.next = new ListNode(2);
 		root.next.next.next.next.next.next = new ListNode(1);
+		System.out.print("The original list given is: ");
+		listOfLinks.print(root);
 		root = listOfLinks.partitionAroundK(root, 5);
 		listOfLinks.print(root);
 	}
