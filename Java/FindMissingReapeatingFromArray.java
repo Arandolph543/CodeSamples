@@ -36,6 +36,7 @@ class FindMissingReapeatingFromArray {
 		try {
 			int[] arrangedArray = null;
     		BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Please enter the number of cases then enter then size of array and then the array of numbers seperated by spaces to find the missing repeating numbers:");
     		int numberInputs = Integer.parseInt(buffer.readLine());
     		while(numberInputs>0) {
     		    int size = Integer.parseInt(buffer.readLine());
