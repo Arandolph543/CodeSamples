@@ -1,17 +1,21 @@
+/*Description: Reverse a linked list returning the head use recursion. 
+Author: April Randolph
+Date: 04/08/20 */
+
 import java.lang.*;
 import java.util.*;
+
+ class Node {
+	int value;
+	Node next;
+	Node(int value) {
+		this.value = value;
+	}
+}
 
 class ReverseLinkedListNodeRecursive {
 
 	static Node head;
-
-	static class Node {
-		int value;
-		Node next;
-		Node(int value) {
-			this.value = value;
-		}
-	}
 	
 	static Node reverseList(Node cur, Node prev) {
 		if(cur.next==null) {
@@ -30,22 +34,22 @@ class ReverseLinkedListNodeRecursive {
 	
 	static void printLinkedList(Node node) {
 		while(node!=null) {
-			System.out.println(node.value);
+			System.out.print(node.value + " ");
 			node = node.next;
 		}
 	}
 	
 	public static void main(String[] args) {
-		ReverseLinkedListNode nodesList = new ReverseLinkedListNode();
-		nodesList.head = new Node(3);
-		nodesList.head.next = new Node(8);
-		nodesList.head.next.next = new Node(2);
-		nodesList.head.next.next.next = new Node(4);
-		nodesList.head.next.next.next.next = new Node(3);
-		nodesList.head.next.next.next.next.next = new Node(1);
-		nodesList.printLinkedList(head);
+		head = new Node(3);
+		head.next = new Node(8);
+		head.next.next = new Node(2);
+		head.next.next.next = new Node(4);
+		head.next.next.next.next = new Node(3);
+		head.next.next.next.next.next = new Node(1);
+		printLinkedList(head);
+		System.out.println("Revered this: \n");
 		Node reversedListHead = reverseList(head, null);
-		nodesList.printLinkedList(reversedListHead);
+		printLinkedList(reversedListHead);
 	}
 
 }
