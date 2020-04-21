@@ -1,6 +1,6 @@
 /*Description: Given a tree find the given sum if in the root in the list.
 Author: April Randolph
-Date: 04/09/20*/
+Date: 04/09/20 */
 
 class Node {
 	int value;
