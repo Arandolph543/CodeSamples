@@ -6,86 +6,57 @@ Date: 03/01/20 */
 
 import java.util.*;
 import java.lang.*;
+import java.io.*;
 
 class MissingInteger {
 
-	static int findInteger(int[] A) {
-		int length = A.length;
-		int missingNum = 0;
-		if(length==0)
-			return A;
-
-		Arrays.sort(A);
-		int[] tempArray = new int[length*length];		
-		for(j = 0;j<tempArray.length;j++) {
-			for(int k=0;k<A.length;k++) {
-				if(A[k]==j)
-					tempArray[j] = 1;
+	static int[] findIntegers(int[] A) {
+		int i = 0;
+		int index = 0;
+		boolean foundMissingVal = false;
+		int[] tempArray = new int[A.length];
+		for(i = A[0];i<A.length;i++) {
+			int temp;
+			if(foundMissingVal) {
+				temp = i+2;
+			}else {
+				temp = i+1;
+			}
+			if(A[i]!=temp) {
+				tempArray[index] = temp;
+				foundMissingVal = true;
+				index++;
+				i++;
 			}
 		}
-		for(int i = 1;i<A[length-1]+1;i++) {
-			for(int k=0;k<A.length;k++) {
-				if(tempArray[i] != 1) {
-					missingNum = i;
-				}
-			}
-		}
-		if(missingNum>0
-			return missingNum;
-		boolean increasingArray = false;
-		for(int i = 0;i<length;i++) {
-			if(A[i]==(i+1)) {
-				increasingArray = true;
-			}
-		}
-		if(increasingArray)
-			return (A[length-1]+1);
-		if(A[length-1]<=0) {
-			missingNum = 1;
-		}
-		
-		return missingNum;
-	}
-
-    static int[] findIntegers(int[] A) {
-		int length = A.length;
-		
-		if(length==0)
-			return A;
-		
-		int j = 0;
-		Arrays.sort(A);
-		int[] tempArray = new int[length*length];		
-		for(j = 0;j<tempArray.length;j++) {
-			for(int k=0;k<A.length;k++) {
-				if(A[k]==j)
-					tempArray[j] = 1;
-			}
-		}
-		int[] missingNums = new int[A.length*A.length];
-			
-		for(int i = 1;i<A[length-1]+1;i++) {
-			for(int k=0;k<A.length;k++) {
-				if(tempArray[i] != 1) {
-					missingNums[i] = i;
-				}
-			}
-		}
-		if(A[length-1]==length)
-			return A;
-		if(A[length-1]<=0) {
-			missingNums[0] = 1;
-		}
-        return missingNums;
+		if(tempArray[0]<=0)
+			System.out.println("There are no number missing in the array entered");
+		return tempArray;
 	}
 
 	public static void main(String[] args) {
-	    int[] array = {1,2,3,4};	
-		int[] result = findInteger(array);
-		for(int i =0;i<result.length;i++) {
-			if(result[i]>0)
-				System.out.println(result[i]);
-		}
+		 try {
+	        int[] array = null;
+			System.out.println("Please enter the number of arrays with missing numbers then press enter: ");
+			System.out.println("Enter the array separated by spaces of increasing numbers then enter:");
+    		BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
+    		int numberInputs = Integer.parseInt(buffer.readLine());
+    		while(numberInputs>0) {
+    		    String[] arr = buffer.readLine().split(" ");
+        		array = new int[arr.length];
+        		for(int i = 0;i<arr.length;i++) {
+        		    array[i] = Integer.parseInt(arr[i]);
+        		}
+				int[] result = findIntegers(array);
+				for(int i =0;i<result.length;i++) {
+					if(result[i]>0)
+						System.out.print(result[i] + ",");
+					System.out.println();
+				}
+        		numberInputs--;
+    		}
+	    } catch(IOException ex) {
+	        System.out.println(ex.toString());
+	    }
 	}
-
 }

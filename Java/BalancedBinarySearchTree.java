@@ -37,7 +37,7 @@ public class BalancedBinarySearchTree {
 					parent.left = newNode;	
 					return;
 				}
-			}else {
+			} else {
 				current = current.right;
 				if(current==null) {
 					parent.right = newNode;
