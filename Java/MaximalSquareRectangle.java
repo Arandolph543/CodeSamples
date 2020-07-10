@@ -1,3 +1,7 @@
+ /* In a matrice of 2x2 find the largest square in bit.
+ Author: April Randolph
+ Date: 06/21/20*/ 
+ 
  class MaximalSquareRectangle {
 	public int maximalRectangle(char[][] matrix) {
         int row = matrix.length;
