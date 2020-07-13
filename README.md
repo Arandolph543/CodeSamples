@@ -1,4 +1,4 @@
-# CodeSamples
+# CodeSamples - Experienced Fullstack Software Developer Analyst
 Author: April Randolph
 ![Developer problems completed, algorithms and design patterns with refined implementation for showcase of latest technologies.]
 ## Welcome! 👋
