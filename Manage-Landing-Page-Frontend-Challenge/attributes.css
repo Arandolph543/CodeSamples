@@ -306,7 +306,7 @@ body {
 } 
 #sidebar {
 	height: 9em;
-	box-shadow: -.4em 1em #888888;
+	box-shadow: -.4em .8em #888888;
 	width:30%;
 }	
 .sectionsecond {
