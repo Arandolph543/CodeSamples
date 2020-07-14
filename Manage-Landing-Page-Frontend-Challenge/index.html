@@ -56,8 +56,8 @@
  		<section class="sectionsecond">
 			<div class="wrap-row">
 				<div class="box" id="box-md-3">
-					<div class="col-md-6 " id="table-element1">
-						<div class="promo_slogan_mid" id="sidebar_col">
+					<div class="promo_slogan_mid" id="table-element1">
+						<div class="col-sm-2 promo_slogan_mid" id="sidebar_col">
 							<h1> What’s different about Manage?</h1>
 							<br>
 							<p>Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.</p>
@@ -66,7 +66,7 @@
 					<div class="col-xs" id="middle_id_img">
 						<img src="https://i.imgur.com/99FIu0U.png" alt="">
 					</div>
-					<div class="col-md-6 col-md-4 promo_slogan" id="feedback_slogan">
+					<div class="col-lg-6 promo_slogan_mid" id="feedback_slogan">
 						<h2>Track company-wide progress</h2>
 						  <p class="text_slogan">See how your day-to-day tasks fit into the wider vision. Go from 
 						  tracking progress at the milestone level all the way done to the 
@@ -85,10 +85,10 @@
 				</div>
 			</div>
 		</section>  
-		<section class="mycolumn_header sectionthird">
-          <h1 class="mycolumn_header">What they’ve said</h1>
-		</section>		
+		<!-- <section class="mycolumn_header sectionthird"> -->
+		<!-- </section>		 -->
 		<section class="row sectionthird">
+          <h1 class="mycolumn_header">What they’ve said</h1>
 			<div class="mycolumn2" id="content2">
 				<div class="statementnews" id="content_1">
 				  <img src="https://i.imgur.com/19iZKat.png" alt="" />
@@ -132,14 +132,14 @@
 			</div>
         </section>
 	    <section class="row topfooterbanner sectiontopfooter">
-				<div class="foot-row">
-					<h1>Simplify how your team works today.</h1>
-				</div>
-				<div class="updateinput">
-					<p> Update your email ...</p>
-					<input class="email" type="email"></input>
-					<input class="gsbutton btn-danger" src="https://i.imgur.com/XZY4xX0.png"data-toggle="modal" data-target="../ValidateEmailAddressForm.html" type="image" id="email_validate"  alt="Submit">
-				</div>
+			<div class="foot-row">
+				<h1>Simplify how your team works today.</h1>
+			</div>
+			<form class="foot-row-update updateinput" action="">
+				<label id="email_label" for="email">Update your email ...</label>
+				<input class="foot-row-update" type="email" id="email" name="email">
+				<input class="gsbutton btn-danger " src="https://i.imgur.com/XZY4xX0.png"data-toggle="modal" data-target="../ValidateEmailAddressForm.html" type="image" id="email_validate"  alt="ubmit">
+			</form>
 		</section>
 		<section class="row sectionfooter">
 			<div class="footerbanner" id="columns">
