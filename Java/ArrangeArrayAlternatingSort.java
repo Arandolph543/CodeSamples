@@ -17,13 +17,13 @@ class ArrangeArrayAlternatingSort {
         for(int i = arr.length-1;i>-1;--i) {
             if((i %2)==1) {
                 arrArranged[index] = arr[highInd];
-				highInd--;
+		highInd--;
             } 
-			if((i%2)==0) {
-				arrArranged[index] = arr[lowInd];
-				lowInd++;
-			}
-			index++;
+	    if((i%2)==0) {
+		arrArranged[index] = arr[lowInd];
+		lowInd++;
+	    }
+	    index++;
         }
         return arrArranged;
     }
