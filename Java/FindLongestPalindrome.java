@@ -1,3 +1,6 @@
+/* Description: Find the length of the longest possible palindrome given an array of integers.
+Author: April Randolph
+Date:08/21/20 */
 import java.util.*;
 import java.lang.*;
 import java.io.*;
