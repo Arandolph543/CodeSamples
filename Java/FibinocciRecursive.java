@@ -1,3 +1,6 @@
+/*Description: Finds the fibinacci sequence of integers using a recursive method block.
+Author: April Randolph
+Date: 06/21/19*/
 public class FibinocciRecursive {
 	
 	public static int fibinocciRec(int fibNum) {
