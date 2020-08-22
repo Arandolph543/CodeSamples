@@ -1,3 +1,6 @@
+/*Description: An address URLs array is used to determine the network usage of policy that is blacklisted.
+Author: April Randolph
+Date:08/21/20*/
 import java.net.*;
 
 public class BlacklistCookiePolicy implements CookiePolicy {
