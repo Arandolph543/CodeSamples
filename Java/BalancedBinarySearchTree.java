@@ -1,3 +1,6 @@
+/*Description: Integers from user are used to create a balanced binary tree.
+Author: April Randolph
+Date:08/21/20*/
 import java.io.*;
 
 public class BalancedBinarySearchTree {
