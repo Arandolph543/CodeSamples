@@ -1,3 +1,6 @@
+/* Description: Finds the integer as a prime number returning true or false.
+Author: April Randolph
+Date:08/21/20*/
 public class CheckIfPrimeNumber {
 
 	boolean checkIfPrime(int n) {
