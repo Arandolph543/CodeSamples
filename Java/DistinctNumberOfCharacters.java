@@ -1,3 +1,6 @@
+/*Description: Finds the count of distinct characters in the given string.
+Author: April Randolph
+Date: 08/21/20*/
 import java.util.*;
 
 public class DistinctNumberOfCharacters {
