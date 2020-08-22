@@ -1,3 +1,6 @@
+/*Description: Array of integers finds the missing number in the array. 
+Author: April Randolph
+Date: 08/21/20*/
 import java.util.*;
 import java.lang.*;
 import java.io.*;
