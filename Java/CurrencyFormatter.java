@@ -1,3 +1,7 @@
+/*Description: Converts integer into multiple foreign rates.
+Author: April Randolph
+Date:08/21/20*/
+
 import java.util.*;
 import java.text.*;
 
