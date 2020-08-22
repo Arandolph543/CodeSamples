@@ -1,7 +1,6 @@
 /*Description: Find the numbers in the array in triplets to reach a input given the sum. 
-Author
-Date
-*/
+Author: Alril Randolph
+Date:04/03/18; 08/21/20 */
 import java.lang.*;
 import java.util.List;
 import java.util.ArrayList;
