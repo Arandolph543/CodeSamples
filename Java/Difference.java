@@ -1,3 +1,6 @@
+/*Description: Takes an array of integers and an integer of a given difference and returns as many possible pairs of number that can be used to find the difference.
+Author: April Randolph
+Date:08/21/20 */
 import java.util.*;
 import java.io.*;
 
