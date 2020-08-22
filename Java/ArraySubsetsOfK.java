@@ -1,4 +1,4 @@
-/* Find the subsets partitioned for an array where they're equal.
+/* Description: Find the subsets partitioned for an array where they're equal.
 Author: April Randolph
 Date: 06/22/20*/
 import java.util.*;
