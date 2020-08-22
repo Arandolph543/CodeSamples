@@ -1,3 +1,6 @@
+/* Description: Takes a string as representation of DNA encoding and transforms into RNA strand string.
+Author:April Randolph
+Date:08/21/20*/
 import java.util.*;
 
 class CreateDNATransform {
