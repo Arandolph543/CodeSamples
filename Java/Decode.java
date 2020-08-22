@@ -1,3 +1,6 @@
+/*Description: Takes an integer as a coded representation of a message and decodes the letters corresponding returning a string as a message..
+Author: April Randolph
+Date: 08/21/20*/
 public class Decode {
 
 	int decodeMessage(String number) {
