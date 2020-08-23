@@ -1,3 +1,6 @@
+/* Description: With two integer arrays and a given weight integer the value of possible weight is the integer returned called the Knapsack problem..
+Author: April Randolph
+Date: 08/22/20 */
 public class Knapsack {
 
 	static int getWeightValue(int[] values, int[] weights, int W) {
@@ -46,5 +49,4 @@ public class Knapsack {
 		int W = 140;
 		System.out.println("weight: " + getWeightValue(values,weights, W));
 	}
-
 }
