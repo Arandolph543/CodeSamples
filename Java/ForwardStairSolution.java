@@ -1,3 +1,6 @@
+/*Description: Use an integer to print corresponding staircase of '#' as a forward number of steps.
+Author: April Randolph
+Date:01/12/19;08/21/20*/
 import java.util.*;
 import java.math.*;
 
