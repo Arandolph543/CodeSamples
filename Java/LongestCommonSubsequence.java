@@ -1,8 +1,7 @@
 /*Description: Take from the user the number of Subsequences as a String.  Return the longest common subsequence between the 
 two. Find the best space time complexity.
 Author: April Randolph
-Date: 03/26/20
-*/
+Date: 03/26/20; 08/22/20*/
 
 import java.util.ArrayList;
 import java.lang.*;
@@ -41,7 +40,4 @@ class LongestCommonSubsequence {
 			System.out.println(ex);
 		}
 	}
-	
-	
-	
 }
