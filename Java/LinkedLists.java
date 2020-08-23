@@ -1,3 +1,6 @@
+/*Description: LinkedList is created and uses the reverseLinkList function returning a LinkedList of integers reversed from the given list.
+Author: April Randolph
+Date:08/22/20*/
 import java.util.*;
  
 public class LinkedLists
@@ -17,8 +20,8 @@ public class LinkedLists
 	
     public static void main(String args[])
     {
-		LinkedList<String> object = new LinkedList<>();
-		LinkedLists linkedLists = new LinkedLists();
+	LinkedList<String> object = new LinkedList<>();
+	LinkedLists linkedLists = new LinkedLists();
         object.add("A");
         object.add("B");
         object.addLast("C");
@@ -28,8 +31,8 @@ public class LinkedLists
         object.add("G");
         System.out.println("Linked list : " + object);
  
-		object = linkedLists.reverseList(object);
-		System.out.println("Reversed elements: " + object);
+	object = linkedLists.reverseList(object);
+	System.out.println("Reversed elements: " + object);
 		
         object.remove("B");
         object.remove(3);
@@ -44,7 +47,7 @@ public class LinkedLists
         else
             System.out.println("List doesn't contain the element 'E'");
  
-        /* System.out.println("Size of linked list = " + size); */
+        System.out.println("Size of linked list = " + size); 
  
         Object element = object.get(2);
         System.out.println("Element returned by get() : " + element);
