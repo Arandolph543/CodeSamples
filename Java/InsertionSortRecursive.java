@@ -1,5 +1,8 @@
-public class insertionSortRecursive {
+/*Description: Sort the integer array using insertion sort algorithm given the array.
+Author: April Randolph
+Date: 08/21/20*/
 
+public class insertionSortRecursive {
 
 	static void insertionSortRecursive(int[] arr, int n) {
 	
