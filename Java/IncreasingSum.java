@@ -1,3 +1,6 @@
+/*Description: Integer array used to find increasing array with the largest sum.
+Author: April Randolph
+Date:08/21/20*/
 public class IncreasingSum {
 
 	static int findLargestIncreasingSum(int[] arr, int n) {
