@@ -1,3 +1,6 @@
+/*Description: Reverses a number given as an integer.
+Author: April Randolph
+Date: 08/22/20*/
 import java.util.*;
 
 class NumberReverse {
