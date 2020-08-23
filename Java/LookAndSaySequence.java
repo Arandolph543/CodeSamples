@@ -1,3 +1,6 @@
+/*Description: The given int is used to find the look and say sequence return string representing numbers and symbol characters..
+Author: April Randolph
+Date:04/02/19;08/22/20*/
 public class LookAndSaySequence {
 
 	String lookAndSayGenerateNth(int n) {
