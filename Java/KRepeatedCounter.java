@@ -1,5 +1,7 @@
-import java.util.List;
-import java.util.ArrayList;
+/*Description: Find the number of times the count of k occurs returning an int.
+Author: April Randolph
+Date: 08/22/20 */
+
 class KRepeatedCounter {
 	
 	static int findCountOfK(int[] arr, int n, int k) {
