@@ -1,3 +1,7 @@
+/*Description: A list Node is used to merge two lists as an API endpoint method call.
+Author:April Randolph
+Date:08/22/20 */
+
 public class ListNode {
 
 	int val;
@@ -9,7 +13,7 @@ public class ListNode {
 
 class ListsMerge  {
  
-	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+	public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 		ListNode h = new ListNode(0);
 		ListNode list = h;
 		while(l1 != null && l2 != null) {
@@ -32,7 +36,7 @@ class ListsMerge  {
 		return list.next;
 	}
 	
-	public ListNode mergeKLists(ListNode[] list) {
+	public static ListNode mergeKLists(ListNode[] list) {
 		if(list.length==0)
 			return null;
 		int interval = 1;
