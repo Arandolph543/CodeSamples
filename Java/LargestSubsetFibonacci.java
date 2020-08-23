@@ -42,14 +42,4 @@ public class LargestSubsetFibonacci {
 		arrayList.forEach(integer -> {System.out.print(integer + " ");});
 		
 	}
-		
-		
-		
-
-
-
-
-
-
-
 }
