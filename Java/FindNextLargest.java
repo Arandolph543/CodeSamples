@@ -1,3 +1,6 @@
+/*Description: An array of integers used to find the next largest integer from the array.
+Author: April Randolph
+Date:08/21/20*/
 public class FindNextLargest {
 
 	static int[] findNextLargest(int[] array) {
