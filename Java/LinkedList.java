@@ -1,3 +1,6 @@
+/*Description: The linked list of integers is created given the linked list values and then calls to remove duplicates in linkedlist.
+Author: April Randolph
+Date:08/22/20*/
 class LinkedList {
 	static Node head;
 
@@ -47,7 +50,5 @@ class LinkedList {
 		list.printList(head);
 		list.removeDuplicates();
 		list.printList(head);
-		
-	
 	}
 }
