@@ -1,3 +1,6 @@
+/*Description: The given binarytree is created with Node object Linkedlist and determines the maximum depth sum.
+Author:April Randolph
+Date: 04/05/20; 08/22/20*/
 import java.util.*;
 import java.lang.*;
 
@@ -66,6 +69,4 @@ public class MaximumSumDepthInBinaryTree {
 		
 		System.out.println("max path sum is: " + tree.findPathWithLargestSum());
 	}
-
-
 }
