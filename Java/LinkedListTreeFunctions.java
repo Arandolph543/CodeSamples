@@ -1,10 +1,13 @@
+/*Description: Linkedlist functions are used to show the usage of methods associated with the LinkedList.
+Author: April Randolph
+Date:08/22/20*/
 import java.util.*;
  
 public class LinkedListTreeFunctions
 {
     public static void main(String args[])
     {
-		LinkedList<String> object = new LinkedList<String>();
+	LinkedList<String> object = new LinkedList<String>();
         object.add("A");
         object.add("B");
         object.addLast("C");
