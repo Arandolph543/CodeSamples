@@ -1,6 +1,7 @@
-/*Author: April Randolph
-Description: Finding the smallest parenthesis order to multiple chain integer array as matrices.  (Simply remember to use 0 based.)
-*/
+/*Description: Finding the smallest parenthesis order to multiple chain integer array as matrices.  (Simply remember to use 0 based.)
+Author: April Randolph
+Date: 05/01/19;08/22/20*/
+
 import java.lang.Integer;
 
 public class MatrixMultiple {
