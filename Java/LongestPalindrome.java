@@ -1,3 +1,6 @@
+/*Description: An array string is given and the longest palindrome is returned as a string.
+Author:April Randolph
+Date:08/22/20*/
 import java.util.*;
 import java.lang.*;
 
@@ -71,6 +74,4 @@ public class LongestPalindrome {
 		String phrase = "abnnnooottooo";
 		System.out.println(longestSubstring(phrase));	
 	}
-
-
 }
