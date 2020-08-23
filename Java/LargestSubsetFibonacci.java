@@ -1,3 +1,6 @@
+/*Description: Finds the largest subarray of the fibinacci sequence of a given array.
+Author: April Randolph
+Date:08/22/20*/
 import java.util.*;
 public class LargestSubsetFibonacci {
 
