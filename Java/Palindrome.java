@@ -1,3 +1,6 @@
+/*Description: Checks if a string is palindrome or not given the string to check.
+Author:April Randolph
+Date: 03/01/18; 08/22/20*/
 import java.util.Stack;
 
 public class Palindrome {
