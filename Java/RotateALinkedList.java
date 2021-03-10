@@ -1,5 +1,8 @@
+/*Description: Rotate a linked list and return the list from the head node. 
+Author: April Randolph
+Date: 03/10/21*/
+
 class Node {
-	
 	int data;
 	Node next;
 	Node(int data) {
