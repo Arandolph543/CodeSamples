@@ -1,6 +1,6 @@
-/* Description: With two integer arrays and a given weight integer the value of possible weight is the integer returned called the Knapsack problem..
+/* Description: With two integer arrays find the balanaced for total in the array(s). A given weight integer the value of possible weight is the integer returned called the Knapsack problem..
 Author: April Randolph
-Date: 08/22/20 */
+Date: 08/22/20, 03/10/21 */
 public class Knapsack {
 
 	static int getWeightValue(int[] values, int[] weights, int W) {
