@@ -8,7 +8,6 @@ import java.lang.*;
 
 class SumOfMiddleElementsOfTwoSortedArrays {
 
-
 	static int findNMiddleSum(int[] array1, int[] array2) {
 		int len1 = array1.length;
 		int len2 = array2.length;
@@ -35,31 +34,29 @@ class SumOfMiddleElementsOfTwoSortedArrays {
 	public static void main(String[] args) {
 		try {
 			int numPowerExpPairs = 0;
-    		BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
+    			BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
 			System.out.println("Please enter the number of cases, then enter, then size of arrays separated by a space, and then the array of numbers with enter after, separated by spaces to find the middle sum: ");
-    		int numberInputs = Integer.parseInt(buffer.readLine());
-    		while(numberInputs>0) {
-    		    String[] size = buffer.readLine().split(" ");
-				String[] input1 = buffer.readLine().split(" ");
-				String[] input2 = buffer.readLine().split(" ");
-				int size1 = Integer.parseInt(size[0]);
-				int size2 = Integer.parseInt(size[1]);
-				int[] array1 = new int[size1];
-				int[] array2 = new int[size2];
-        		for(int i = 0;i<size1;i++) {
-        		    array1[i] = Integer.parseInt(input1[i]);
-        		}
-        		for(int j = 0;j<size2;j++) {
-					array2[j] = Integer.parseInt(input2[j]);
+			int numberInputs = Integer.parseInt(buffer.readLine());
+			while(numberInputs>0) {
+			    String[] size = buffer.readLine().split(" ");
+					String[] input1 = buffer.readLine().split(" ");
+					String[] input2 = buffer.readLine().split(" ");
+					int size1 = Integer.parseInt(size[0]);
+					int size2 = Integer.parseInt(size[1]);
+					int[] array1 = new int[size1];
+					int[] array2 = new int[size2];
+				for(int i = 0;i<size1;i++) {
+				    array1[i] = Integer.parseInt(input1[i]);
 				}
-        		numPowerExpPairs = findNMiddleSum(array1, array2);
-        		numberInputs--;
-    		}
+				for(int j = 0;j<size2;j++) {
+						array2[j] = Integer.parseInt(input2[j]);
+					}
+				numPowerExpPairs = findNMiddleSum(array1, array2);
+				numberInputs--;
+			}
 			System.out.println("The number of pairs is: " + numPowerExpPairs);
-	    } catch(IOException ex) {
-	        System.out.println(ex.toString());
-	    }
+		    } catch(IOException ex) {
+			System.out.println(ex.toString());
+		    }
 	}	
-
-
 }
