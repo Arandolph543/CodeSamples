@@ -16,8 +16,10 @@ public class RotateALinkedList {
 		Node previous;
 		Node current = head;
 		int count = 0;
+		//Base case: if node is null
 		if(head != null) 
 			count = 1;
+		//get the list count
 		while(current != null) {
 			current = current.next;
 			count++;
@@ -25,13 +27,16 @@ public class RotateALinkedList {
 				break;
 			}	
 		}
+		//set the head to next setting iterated node to null
 		newHead = current.next;
 		current.next = null;
+		//go back through the enter list setting the new head node
 		next = newHead;
 		while(next.next != null) {
 			next = next.next;			
 		}
 		next.next = head;
+		//return the same list rotated new head
 		return newHead;
 	}
 
