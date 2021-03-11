@@ -11,10 +11,10 @@ public class FindNextLargest {
 		}
 		for(int i=0;i<n;i++) {
 		    for(int j = 0;j<n;j++) {			
-				if(array[i] < array[j] && j > i) {
-					nextLargest[i] = array[j];
-					break;
-				} 
+			if(array[i] < array[j] && j > i) {
+				nextLargest[i] = array[j];
+				break;
+			} 
 		    }
 		}
 		return nextLargest;
