@@ -1,3 +1,6 @@
+/*Description: Given a linkedlist sorted insert the node into the list.
+Author: April Randolph
+Date: 03/10/21*/
 class ListNode {
 	int val;
 	ListNode next;
@@ -30,13 +33,11 @@ public class SortLinkedListInsertion {
 				newHead.next = oldHead;
 			} else {
 				while (innerPointer.next != null) {
- 
 					if (pointer.val > innerPointer.val && pointer.val <= innerPointer.next.val) {
 						ListNode oldNext = innerPointer.next;
 						innerPointer.next = pointer;
 						pointer.next = oldNext;
-					}
- 
+					} 
 					innerPointer = innerPointer.next;
 				}
  
@@ -49,7 +50,6 @@ public class SortLinkedListInsertion {
 			// finally
 			pointer = next;
 		}
- 
 		return newHead;
 	}
  
@@ -75,7 +75,7 @@ public class SortLinkedListInsertion {
 	}
  
 	public static void printList(ListNode x) {
-		if(x != null){
+		if(x != null) {
 			System.out.print(x.val + " ");
 			while (x.next != null) {
 				System.out.print(x.next.val + " ");
@@ -83,6 +83,5 @@ public class SortLinkedListInsertion {
 			}
 			System.out.println();
 		}
- 
 	}
 }
