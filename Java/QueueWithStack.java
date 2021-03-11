@@ -1,3 +1,6 @@
+/*Description: Implement a Queue data type with the use of java Stack. The queue can push, enqueue, dequee, etc. all the functions a java queue has.
+Author: April Randolph
+Date: 03/10/21*/
 import java.util.Stack;
 
 class QueueWithStack {
@@ -49,5 +52,4 @@ class QueueWithStack {
 		System.out.print(deQueue(q) + " ");
 		System.out.println(deQueue(q) + " ");
 	}
-
 }
