@@ -8,9 +8,7 @@ public class BubbleSort {
 	
 	public HashMap bubbleSort(int[] array) {
 		int i = 0;
-		
 		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-		/* compares the index to put the higher value in the higher index */
 		for(int k=array.length; k > 0;k--) {
 			for(int h =0;h < array.length -1;h++) {
 				if(array[h] > array[h+1]) {
