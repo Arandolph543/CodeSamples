@@ -35,12 +35,12 @@ class ArrayArrangedGivenRelativeSorting {
 		int placeCount = lenArr1 - index;
 		int[] extraArrayToSort = new int[placeCount];
 		arrIndex = 0;
-        for(int k =0;k<lenArr1;k++) {
+                for(int k =0;k<lenArr1;k++) {
 			if(usedArray[k]==0) {
 				extraArrayToSort[arrIndex] = arr1[k];
 				arrIndex++;
 			}
-        } 
+                } 
 		Arrays.sort(extraArrayToSort);
 		arrIndex = 0;
 		for(int k =0;k<placeCount;k++) {
@@ -49,8 +49,7 @@ class ArrayArrangedGivenRelativeSorting {
 		
         return arrangedArray;
     }
-    
-	public static void main (String[] args) {
+    public static void main (String[] args) {
 	    try {
 	        int[] arrangedArray = null;
     		BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
@@ -76,5 +75,5 @@ class ArrayArrangedGivenRelativeSorting {
 	    } catch(IOException ex) {
 	        System.out.println(ex.toString());
 	    }
-	}
+    }
 }
