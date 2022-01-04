@@ -14,41 +14,41 @@ class ArrayArrangedGivenRelativeSorting {
         int[] arrangedArray = new int[lenArr1];
         int index = 0;
         int[] usedArray = new int[lenArr1];
-		for(int k =0;k<lenArr1;k++) {
-			usedArray[k]=0;			
-		}
-		int arrIndex = 0;
+        for(int k =0;k<lenArr1;k++) {
+		usedArray[k]=0;			
+	}
+	int arrIndex = 0;
 		
-		if(lenArr2 <= lenArr1) {
-			for(int i = 0;i<lenArr2;i++) {
-				for(int j = 0;j<lenArr1;j++) {
-					if(arr1[j]==arr2[i]) {
-						arrangedArray[arrIndex] = arr1[j];
-						usedArray[j] = 1;
-						index = j;
-						arrIndex++;
-					} 
-				}
+	if(lenArr2 <= lenArr1) {
+		for(int i = 0;i<lenArr2;i++) {
+			for(int j = 0;j<lenArr1;j++) {
+				if(arr1[j]==arr2[i]) {
+					arrangedArray[arrIndex] = arr1[j];
+					usedArray[j] = 1;
+					index = j;
+					arrIndex++;
+				} 
 			}
 		}
+	  }
 		
-		int placeCount = lenArr1 - index;
-		int[] extraArrayToSort = new int[placeCount];
-		arrIndex = 0;
-                for(int k =0;k<lenArr1;k++) {
-			if(usedArray[k]==0) {
-				extraArrayToSort[arrIndex] = arr1[k];
-				arrIndex++;
-			}
-                } 
-		Arrays.sort(extraArrayToSort);
-		arrIndex = 0;
-		for(int k =0;k<placeCount;k++) {
-			arrangedArray[index+k] = extraArrayToSort[k];
-	    }
-		
-        return arrangedArray;
+	  int placeCount = lenArr1 - index;
+	  int[] extraArrayToSort = new int[placeCount];
+	  arrIndex = 0;
+          for(int k =0;k<lenArr1;k++) {
+		if(usedArray[k]==0) {
+			extraArrayToSort[arrIndex] = arr1[k];
+			arrIndex++;
+		}
+           } 
+	   Arrays.sort(extraArrayToSort);
+	   arrIndex = 0;
+	   for(int k =0;k<placeCount;k++) {
+		arrangedArray[index+k] = extraArrayToSort[k];
+	   }
+           return arrangedArray;
     }
+
     public static void main (String[] args) {
 	    try {
 	        int[] arrangedArray = null;
