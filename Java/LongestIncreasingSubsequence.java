@@ -8,23 +8,24 @@ import java.lang.*;
 class LongestIncreasingSubsequence {
 	
 	static int findLongestIncreasing(int[] array, int, index, int n. int seqLength) {
-		int tempSeqLength = 1;
+                // Initialize a tempIndex, grabbing the first array element to recurse through for length of longest sequence.
+    		int tempSeqLength = 1;
 		int num = array[0];
 		if(n==0 | n==1)
 			return 1;
 		for(int i = index;i<n;i++) {
+                        //check for array containing larger numbers in order 
 			if(array[i]>num) {
 				tempSeqLength++;
 				num = array[i];
                                 index = i;
 			}
-		}
+		 }
                  seqLength = Math.max(tempSeqLength, seqLength);
-	         if (n-tempSeqLength>seqLength){
+	         if (n-tempSeqLength>seqLength) {
                     return findLongestIncreasing(array,index,n,tempSeqLength);
-                  } 
-
-		return seqLength;
+                 } 
+		 return seqLength;
 	}
 	
 	public static void main(String[] args) {
