@@ -6,6 +6,7 @@ import java.lang.*;
 
 public class CreateArraysFromAFirstThenFromB {
 
+        //The new sorted array containing the elements from both lists print to console function taking the array and length
 	void print(int[] C, int length) {
 		for(int i = 0;i<length;i++) {
 			System.out.print(C[i] + " ");	
@@ -13,6 +14,7 @@ public class CreateArraysFromAFirstThenFromB {
 		System.out.println("");			
 	}
 
+        //The function to sort the arrays creating a third array that then calls the print method checking for edge cases on input arrays
 	void generateUtil(int[] A, int[] B, int[] C, int i, int j, int m, int n, int len, boolean flag) {
 		if(flag) {
 			if(len != 0) {
@@ -36,7 +38,8 @@ public class CreateArraysFromAFirstThenFromB {
 			}
 		}
 	}
-	
+
+	//The functional call to the utility to process sort passing the created result array 
 	void generate(int[] A, int[] B, int m, int n) {
 	        int[] C = new int[m+n];
 		generateUtil(A, B, C, 0,0,m,n,0,true);		
