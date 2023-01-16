@@ -6,6 +6,8 @@ Author: April Randolph
 As you'll notice CodeSamples is full of algorithms, designs, interview question kata's, challenges and just personal projects works to keep abreast of the latest frameworks in Java, HTML. JavaScript and .NET. Also, check out my codepen projects and questions to other development implementations on stackoverflow.
 
 https://codepen.io/April-Randolph
+Games: TicTacToe
+
 https://stackoverflow.com/users/754291/april-nara
 
 Thanks for checking out my code. 
