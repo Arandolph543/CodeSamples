@@ -23,8 +23,9 @@ public class CountStairs {
 			BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
 			String inputString = buffer.readLine(); 
 			int inputN = Integer.parseInt(inputString);
-			System.out.println("A child can run up the " + inputN + " " + countWays(inputN) + " ways."); } catch(IOException ex) {
-		System.out.println(ex);
+			System.out.println("A child can run up the " + inputN + " " + countWays(inputN) + " ways."); 
+		} catch(IOException ex) {
+			System.out.println(ex);
 		}
         }
 }
