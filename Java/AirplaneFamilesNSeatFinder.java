@@ -1,3 +1,6 @@
+/* Interview question for Amazon 2020. Arrange the passangers in the plane in the specified
+seating arrangment pattern, to get number of familes that can fit on a plane. */ 
+
 import java.lang.*;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
