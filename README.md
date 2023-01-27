@@ -10,7 +10,7 @@ https://stackoverflow.com/users/754291/april-nara
 https://codepen.io/April-Randolph
 Games: TicTacToe
 
-Thank you for checking out my code. :-D 
+Thank you for checking out my code and I look forward to speaking in person about my talent, skill sets and qualifications.  
 
 ## Community 
 [ASU] https://engineering.asu.edu/
