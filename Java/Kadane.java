@@ -4,28 +4,25 @@ Date: 01/26/23
  */
 import java.lang.*;
 import java.io.*;
+import java.util.*;
 
-public class Kadane {
-
-    public static long Kadane(int[] arr, int n) {
-        long max= arr[0];
-        long j, i = 0;
-        int[] temp = new int[n];
-        for(i =0;i<ni++) {
-            int x = max + arr[i];
-            if(arr[i]>max) {
-                max = arr[i];
-                temp[i] = max;
-                j = i;
-            } else if(arr[i]+max>max) {
-                max = arr[i]+max;
-                temp[i] = max;
-            }
+class Kadane {
+    // Driver Code
+    static int maxSubArraySum(int a[])
+    {
+        int size = a.length;
+        int max = Integer.MIN_VALUE, highest = 0;
+        for (int i = 0; i < size; i++) {
+            highest = highest + a[i];
+            if (max < highest)
+                max = highest;
+            if (highest < 0)
+                highest = 0;
         }
-        return max
+        return max;
     }
 
-    public static void main(String{[] args) {
+    public static void main(String[] args) {
         try {
             System.out.println("Please enter the array of numbers, without spaces: (Press-enter)");
             BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
@@ -35,12 +32,16 @@ public class Kadane {
             if(inputArray != null) {
                 arr = new int[n];
                 for(int i = 0;i<n;i++) {
-                    arr[i] = Integer.valueOf(String.valueOf(inputArray.charAt(i)));
-                    System.out.print(arr[i] + " " + inputArray.charAt(i) + " " + String.valueOf(arr[i]));
+                    if(String.valueOf(inputArray.charAt(i)).equals("-")) {
+                        i++;
+                        n--;
+                        arr[i] = Integer.valueOf(-1 * Integer.valueOf(String.valueOf(inputArray.charAt(i))));
+                    } else {
+                        arr[i] = Integer.valueOf(String.valueOf(inputArray.charAt(i)));
+                    }
                 }
             }
-
-            printArray(arr,n, k);
+            System.out.println("The highest id " + maxSubArraySum(arr));
         }  catch(IOException ex) {
             System.out.println(ex);
         }

@@ -33,11 +33,14 @@ public class HighestOfSizeKArrays {
 			if(inputArray != null) {
 				arr = new int[n];
 				for(int i = 0;i<n;i++) {
+					//System.out.print( inputArray.charAt(i) + " ");
 					arr[i] = Integer.valueOf(String.valueOf(inputArray.charAt(i)));
+					System.out.print(arr[i] + " " + inputArray.charAt(i) + " " + String.valueOf(arr[i]));
 				}
 			}
 			System.out.println("Enter the length of a subset size of the array as k: ");
 			int k = Integer.valueOf(buffer.readLine());
+
 			printArray(arr,n, k);
 		}  catch(IOException ex) {
 			System.out.println(ex);
