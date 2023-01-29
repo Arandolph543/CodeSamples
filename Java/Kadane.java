@@ -7,17 +7,30 @@ import java.io.*;
 import java.util.*;
 
 class Kadane {
-    // Driver Code
+    //Find the highest in the given k of the array of the numbers in the array.
     static int maxSubArraySum(int a[])
     {
+        int index = 0;
         int size = a.length;
         int max = Integer.MIN_VALUE, highest = 0;
         for (int i = 0; i < size; i++) {
             highest = highest + a[i];
-            if (max < highest)
+            if (max < highest) {
                 max = highest;
-            if (highest < 0)
+                index++;
+            }
+            if (highest < 0) {
+                System.out.println("Debug: " + max + " heighest " + highest);
                 highest = 0;
+                index++;
+            }
+
+        }
+        //Indicate to the console that the whole array was the subarray all positive number or all negative.
+        if(index==size && max<=highest) {
+            System.out.println("The positive numbers used the whole array added togther.");
+        } else if(max<=0 || index==size) {
+            System.out.println("The negative numbers used the whole array added together resulting in zero.");
         }
         return max;
     }
