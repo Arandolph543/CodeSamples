@@ -6,11 +6,11 @@ class QuickSort {
 
 	public static int partition(int[] arr, int low, int high) {
 		int i = low-1;
-		System.out.println("Debug: " + arr[low] + " " + low + " " + high);
+		
 		int pivot = arr[high-1];
 		for(int k =low;k<high;k++) {
 			//element is less than pivot
-		System.out.println("Debug: " + arr[k] + " " + pivot + " " + i);
+		
 			if(arr[k] < pivot) {
 				i++;
 				//swap with arr[i]
