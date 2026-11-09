@@ -1,31 +1,32 @@
-import java.util.*;
+ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
 class QuickSort {
 
 	public static int partition(int[] arr, int low, int high) {
+		int pivot = arr[high];
+		//index of smaller of the right position of pivot
 		int i = low-1;
-		
-		int pivot = arr[high-1];
-		for(int k =low;k<high;k++) {
+		//move all smaller elements to the left side
+		for(int k =low;k<high-1;k++) {
 			//element is less than pivot
-		
 			if(arr[k] < pivot) {
 				i++;
 				//swap with arr[i]
-				int temp = arr[i];
-				arr[i] = arr[k];
-				arr[k] = temp;
-				
+				swap(arr,i,k);
 			}
 		}
-		int swap =  arr[high-1];
-		arr[high-1] = arr[i+1];
-		arr[i+1] = swap;
-		
+		//move pivot after smaller elements and return its postion
+		swap(arr, i+1, high);
 		return i+1;
 	}
+	static void swap(int[] arr, int i, int j) {
+		int temp arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
+	}
+
 
 	public static int[] sort(int[] array, int i, int j) {
 		if(i<j) {
