@@ -28,12 +28,12 @@ class QuickSort {
 	}
 
 
-	public static int[] sort(int[] array, int i, int j) {
-		if(i<j) {
-			int pari = partition(array, 0, j);
+	public static int[] sort(int[] array, int low, int high) {
+		if(low<high) {
+			int pari = partition(array, low, high);
 			
-			sort(array, i, pari-1);
-			sort(array, pari+1, j);
+			sort(array, low, pari-1);
+			sort(array, pari+1, high);
 		}
 		return array;
 	}
